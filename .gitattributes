@@ -1,0 +1,4 @@
+# NOTE: .npz oracle/value arrays are intentionally NOT tracked (see data/README.md
+# and .gitignore): they are regenerable from the oracle solver and are slated for
+# a Zenodo deposit. git-lfs is not available in the authoring sandbox, so no LFS
+# filter is configured; if you enable LFS later, add: *.npz filter=lfs diff=lfs merge=lfs -text

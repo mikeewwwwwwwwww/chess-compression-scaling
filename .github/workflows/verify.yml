@@ -1,0 +1,59 @@
+name: verify
+
+# Self-contained trust gate. Re-runs the oracle at N=3/4, the smallest class
+# pipeline end-to-end (K+N vs K+N, N=3), and the smallest Z3 certification,
+# then asserts the exact published values (see experiments/verify_gate.py).
+#
+# The family-level N=4 trust gate (routed total == 4,885 nodes) needs the
+# frozen K2P artifact arrays (phase6c/7a/7b npz), which are NOT distributed
+# in this repository; that gate runs locally where those arrays exist (see
+# REPRODUCE.md) and is therefore not part of CI.
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # the pipeline scripts import k2pn_basis (experiments/z3/), which were
+      # siblings in the original flat layout; scripts themselves are unmodified
+      PYTHONPATH: ${{ github.workspace }}/experiments/z3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Oracle N=3
+        run: python experiments/oracle/phase1_solver_general.py --n 3 --out-dir run/out_n3
+
+      - name: Oracle N=4
+        run: python experiments/oracle/phase1_solver_general.py --n 4 --out-dir run/out_n4
+
+      - name: Class kn N=3 oracle (with K2P cross-check arrays)
+        run: |
+          mkdir -p experiments/class/out_n3
+          cp run/out_n3/phase1_values.npz experiments/class/out_n3/
+          python experiments/class/k2pn_classes.py --n 3 --class-name kn --out-dir run/out_class_kn_n3
+
+      - name: Class kn N=3 compression + emitted-evaluator verification
+        run: python experiments/class/compress_class_k2pn.py --n 3 --class-name kn --oracle-dir run/out_class_kn_n3 --out-dir run/compress_class_kn_n3 --emit-dir run/compress_class_kn_n3
+
+      - name: Z3 certification (basis v2, kn N=3)
+        run: python experiments/z3/z3_injectivity.py --n 3 --class-name kn --basis v2 --mode auto --oracle-dir run/out_class_kn_n3 --out run/z3_kn_n3.json
+
+      - name: Assert published values
+        run: python experiments/verify_gate.py --oracle-n4 run/out_n4/phase1_results.txt --oracle-n3 run/out_n3/phase1_results.txt --class-json run/compress_class_kn_n3/compression_results.json --z3-json run/z3_kn_n3.json
+
+      - name: Upload run outputs (debugging artifacts)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-outputs
+          path: run/
+          retention-days: 7
