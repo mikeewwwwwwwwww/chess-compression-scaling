@@ -1,0 +1,1466 @@
+{
+ "runs": {
+  "n4_duel": {
+   "n": 4,
+   "family_cli": "duel",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "duel",
+    "kind": "d5",
+    "states": 16920,
+    "canonical_orbits": 4230,
+    "bare_canonical_orbits": 78,
+    "non_bare_rows": 4152,
+    "orbit_size_histogram": {
+     "4": 16920
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 652,
+     "paths": 1280,
+     "max_depth": 15
+    },
+    "win_loss_bdds": {
+     "win": {
+      "nodes": 507,
+      "paths": 1032,
+      "depth": 15
+     },
+     "loss": {
+      "nodes": 375,
+      "paths": 746,
+      "depth": 15
+     },
+     "total_nodes": 1534
+    },
+    "stages": [
+     {
+      "stage": "load/orbit start [duel/full-family] (16,920 states)",
+      "rss_mib": 63.6,
+      "peak_mib": 66.6,
+      "t_s": 0.0
+     },
+     {
+      "stage": "orbit quotient done [duel/full-family]",
+      "rss_mib": 64.1,
+      "peak_mib": 66.6,
+      "t_s": 0.2
+     },
+     {
+      "stage": "sort rows [duel/full-family semantic-only]",
+      "rss_mib": 66.2,
+      "peak_mib": 66.6,
+      "t_s": 0.2
+     },
+     {
+      "stage": "rows ready [duel/full-family semantic-only] (4,152 rows)",
+      "rss_mib": 66.2,
+      "peak_mib": 66.6,
+      "t_s": 0.2
+     },
+     {
+      "stage": "feature extraction done [duel/full-family] (4,152 rows)",
+      "rss_mib": 66.2,
+      "peak_mib": 66.6,
+      "t_s": 0.3
+     },
+     {
+      "stage": "mtbdd build start [duel/full-family]",
+      "rss_mib": 66.2,
+      "peak_mib": 66.6,
+      "t_s": 0.3
+     },
+     {
+      "stage": "mtbdd build done [duel/full-family]",
+      "rss_mib": 68.5,
+      "peak_mib": 68.5,
+      "t_s": 0.4
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 60,
+     "tree_lines": 3033,
+     "main_lines": 2677,
+     "total_lines": 3143,
+     "surviving_features": [
+      "tau",
+      "blocked",
+      "dt",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "t_R",
+      "e_R",
+      "e_A",
+      "e_D"
+     ],
+     "used_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      20,
+      21,
+      22
+     ]
+    },
+    "verification": {
+     "verified_states": 16920,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 2.972,
+     "us_per_state_dict_raw": 0.087
+    }
+   }
+  },
+  "n4_asym_3p": {
+   "n": 4,
+   "family_cli": "asym_3p",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "asym_3p",
+    "kind": "d7",
+    "states": 74340,
+    "canonical_orbits": 18585,
+    "bare_canonical_orbits": 0,
+    "non_bare_rows": 18585,
+    "orbit_size_histogram": {
+     "4": 74340
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 2050,
+     "paths": 3861,
+     "max_depth": 19
+    },
+    "win_loss_bdds": {
+     "win": {
+      "nodes": 1392,
+      "paths": 2705,
+      "depth": 19
+     },
+     "loss": {
+      "nodes": 1594,
+      "paths": 3162,
+      "depth": 19
+     },
+     "total_nodes": 5036
+    },
+    "stages": [
+     {
+      "stage": "load/orbit start [asym_3p/full-family] (74,340 states)",
+      "rss_mib": 63.2,
+      "peak_mib": 66.1,
+      "t_s": 0.0
+     },
+     {
+      "stage": "orbit quotient done [asym_3p/full-family]",
+      "rss_mib": 67.4,
+      "peak_mib": 67.4,
+      "t_s": 0.9
+     },
+     {
+      "stage": "sort rows [asym_3p/full-family]",
+      "rss_mib": 78.4,
+      "peak_mib": 78.4,
+      "t_s": 1.0
+     },
+     {
+      "stage": "rows ready [asym_3p/full-family] (18,585 rows)",
+      "rss_mib": 79.2,
+      "peak_mib": 79.2,
+      "t_s": 1.1
+     },
+     {
+      "stage": "feature extraction done [asym_3p/full-family] (18,585 rows)",
+      "rss_mib": 79.2,
+      "peak_mib": 79.2,
+      "t_s": 1.1
+     },
+     {
+      "stage": "mtbdd build start [asym_3p/full-family]",
+      "rss_mib": 79.2,
+      "peak_mib": 79.2,
+      "t_s": 1.1
+     },
+     {
+      "stage": "mtbdd build done [asym_3p/full-family]",
+      "rss_mib": 145.1,
+      "peak_mib": 145.1,
+      "t_s": 4.0
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 235,
+     "tree_lines": 8781,
+     "main_lines": 7112,
+     "total_lines": 8949,
+     "surviving_features": [
+      "nW",
+      "nB",
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R",
+      "e_A",
+      "e_D",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dx_D2"
+     ],
+     "used_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37
+     ]
+    },
+    "verification": {
+     "verified_states": 74340,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 4.367,
+     "us_per_state_dict_raw": 0.084
+    }
+   }
+  },
+  "n4_four_pawn": {
+   "n": 4,
+   "family_cli": "four_pawn",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "four_pawn",
+    "kind": "d7",
+    "states": 63628,
+    "canonical_orbits": 15907,
+    "bare_canonical_orbits": 0,
+    "non_bare_rows": 15907,
+    "orbit_size_histogram": {
+     "4": 63628
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 2183,
+     "paths": 3933,
+     "max_depth": 21
+    },
+    "win_loss_bdds": {
+     "win": {
+      "nodes": 1915,
+      "paths": 3678,
+      "depth": 21
+     },
+     "loss": {
+      "nodes": 1807,
+      "paths": 3388,
+      "depth": 21
+     },
+     "total_nodes": 5905
+    },
+    "stages": [
+     {
+      "stage": "load/orbit start [four_pawn/full-family] (63,628 states)",
+      "rss_mib": 63.6,
+      "peak_mib": 66.6,
+      "t_s": 0.0
+     },
+     {
+      "stage": "orbit quotient done [four_pawn/full-family]",
+      "rss_mib": 67.1,
+      "peak_mib": 67.1,
+      "t_s": 0.8
+     },
+     {
+      "stage": "sort rows [four_pawn/full-family]",
+      "rss_mib": 76.6,
+      "peak_mib": 76.6,
+      "t_s": 0.9
+     },
+     {
+      "stage": "rows ready [four_pawn/full-family] (15,907 rows)",
+      "rss_mib": 77.4,
+      "peak_mib": 77.4,
+      "t_s": 1.0
+     },
+     {
+      "stage": "feature extraction done [four_pawn/full-family] (15,907 rows)",
+      "rss_mib": 77.4,
+      "peak_mib": 77.4,
+      "t_s": 1.0
+     },
+     {
+      "stage": "mtbdd build start [four_pawn/full-family]",
+      "rss_mib": 77.4,
+      "peak_mib": 77.4,
+      "t_s": 1.0
+     },
+     {
+      "stage": "mtbdd build done [four_pawn/full-family]",
+      "rss_mib": 137.4,
+      "peak_mib": 137.4,
+      "t_s": 3.3
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 235,
+     "tree_lines": 8854,
+     "main_lines": 7268,
+     "total_lines": 9021,
+     "surviving_features": [
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R",
+      "e_A",
+      "e_D",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dx_D2"
+     ],
+     "used_indices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37
+     ]
+    },
+    "verification": {
+     "verified_states": 63628,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 4.751,
+     "us_per_state_dict_raw": 0.088
+    }
+   }
+  },
+  "n4_all": {
+   "n": 4,
+   "family_cli": "all",
+   "mem_ceiling_mib": 3400,
+   "per_family": {
+    "duel": {
+     "mode": "full-family",
+     "states": 16920,
+     "canonical_orbits": 4230,
+     "rows": 4152,
+     "semantic_conflicts": 0,
+     "nodes": 652,
+     "depth": 15,
+     "ratio": 26.0
+    },
+    "asym_3p": {
+     "mode": "full-family",
+     "states": 74340,
+     "canonical_orbits": 18585,
+     "rows": 18585,
+     "semantic_conflicts": 0,
+     "nodes": 2050,
+     "depth": 19,
+     "ratio": 36.3
+    },
+    "four_pawn": {
+     "mode": "full-family",
+     "states": 63628,
+     "canonical_orbits": 15907,
+     "rows": 15907,
+     "semantic_conflicts": 0,
+     "nodes": 2183,
+     "depth": 21,
+     "ratio": 29.1
+    }
+   },
+   "router_total_nodes": 4885
+  },
+  "n3_duel": {
+   "n": 3,
+   "family_cli": "duel",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "duel",
+    "kind": "d5",
+    "states": 604,
+    "canonical_orbits": 154,
+    "bare_canonical_orbits": 17,
+    "non_bare_rows": 137,
+    "orbit_size_histogram": {
+     "2": 12,
+     "4": 592
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 59,
+     "paths": 84,
+     "max_depth": 10
+    },
+    "win_loss_bdds": {
+     "win": {
+      "nodes": 32,
+      "paths": 44,
+      "depth": 10
+     },
+     "loss": {
+      "nodes": 44,
+      "paths": 67,
+      "depth": 10
+     },
+     "total_nodes": 135
+    },
+    "stages": [
+     {
+      "stage": "load/orbit start [duel/full-family] (604 states)",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "orbit quotient done [duel/full-family]",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "sort rows [duel/full-family semantic-only]",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "rows ready [duel/full-family semantic-only] (137 rows)",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "feature extraction done [duel/full-family] (137 rows)",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "mtbdd build start [duel/full-family]",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.0
+     },
+     {
+      "stage": "mtbdd build done [duel/full-family]",
+      "rss_mib": 40.4,
+      "peak_mib": 40.4,
+      "t_s": 0.1
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 3,
+     "tree_lines": 228,
+     "main_lines": 304,
+     "total_lines": 328,
+     "surviving_features": [
+      "tau",
+      "dt",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R"
+     ],
+     "used_indices": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      20
+     ]
+    },
+    "verification": {
+     "verified_states": 604,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 2.33,
+     "us_per_state_dict_raw": 0.091
+    }
+   }
+  },
+  "n5_duel": {
+   "n": 5,
+   "family_cli": "duel",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "duel",
+    "kind": "d5",
+    "states": 177640,
+    "canonical_orbits": 44454,
+    "bare_canonical_orbits": 234,
+    "non_bare_rows": 44220,
+    "orbit_size_histogram": {
+     "2": 176,
+     "4": 177464
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 3917,
+     "paths": 11586,
+     "max_depth": 16
+    },
+    "win_loss_bdds": {
+     "win": {
+      "nodes": 3018,
+      "paths": 9389,
+      "depth": 16
+     },
+     "loss": {
+      "nodes": 2005,
+      "paths": 6248,
+      "depth": 15
+     },
+     "total_nodes": 8940
+    },
+    "stages": [
+     {
+      "stage": "load/orbit start [duel/full-family] (177,640 states)",
+      "rss_mib": 863.1,
+      "peak_mib": 1001.4,
+      "t_s": 0.9
+     },
+     {
+      "stage": "orbit quotient done [duel/full-family]",
+      "rss_mib": 868.8,
+      "peak_mib": 1001.4,
+      "t_s": 2.7
+     },
+     {
+      "stage": "sort rows [duel/full-family semantic-only]",
+      "rss_mib": 886.9,
+      "peak_mib": 1001.4,
+      "t_s": 2.8
+     },
+     {
+      "stage": "rows ready [duel/full-family semantic-only] (44,220 rows)",
+      "rss_mib": 886.9,
+      "peak_mib": 1001.4,
+      "t_s": 2.9
+     },
+     {
+      "stage": "feature extraction done [duel/full-family] (44,220 rows)",
+      "rss_mib": 873.1,
+      "peak_mib": 1001.4,
+      "t_s": 2.9
+     },
+     {
+      "stage": "mtbdd build start [duel/full-family]",
+      "rss_mib": 873.1,
+      "peak_mib": 1001.4,
+      "t_s": 2.9
+     },
+     {
+      "stage": "mtbdd build done [duel/full-family]",
+      "rss_mib": 927.8,
+      "peak_mib": 1001.4,
+      "t_s": 4.8
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 532,
+     "tree_lines": 22380,
+     "main_lines": 17835,
+     "total_lines": 22489,
+     "surviving_features": [
+      "tau",
+      "blocked",
+      "dt",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "dy_p",
+      "t_R",
+      "e_R"
+     ],
+     "used_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20
+     ]
+    },
+    "verification": {
+     "verified_states": 177640,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 3.062,
+     "us_per_state_dict_raw": 0.102
+    }
+   }
+  },
+  "n5_asym_3p": {
+   "n": 5,
+   "family_cli": "asym_3p",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "asym_3p",
+    "kind": "d7",
+    "states": 1909806,
+    "canonical_orbits": 477677,
+    "bare_canonical_orbits": 0,
+    "non_bare_rows": 477677,
+    "orbit_size_histogram": {
+     "2": 902,
+     "4": 1908904
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 23034,
+     "paths": 75271,
+     "max_depth": 22
+    },
+    "win_loss_bdds": null,
+    "stages": [
+     {
+      "stage": "load/orbit start [asym_3p/full-family] (1,909,806 states)",
+      "rss_mib": 878.0,
+      "peak_mib": 1001.7,
+      "t_s": 1.0
+     },
+     {
+      "stage": "orbit quotient done [asym_3p/full-family]",
+      "rss_mib": 951.4,
+      "peak_mib": 1001.7,
+      "t_s": 23.7
+     },
+     {
+      "stage": "sort rows [asym_3p/full-family]",
+      "rss_mib": 1221.6,
+      "peak_mib": 1233.2,
+      "t_s": 27.2
+     },
+     {
+      "stage": "rows ready [asym_3p/full-family] (477,677 rows)",
+      "rss_mib": 1268.0,
+      "peak_mib": 1318.9,
+      "t_s": 28.8
+     },
+     {
+      "stage": "feature extraction done [asym_3p/full-family] (477,677 rows)",
+      "rss_mib": 1268.0,
+      "peak_mib": 1318.9,
+      "t_s": 28.8
+     },
+     {
+      "stage": "mtbdd build start [asym_3p/full-family]",
+      "rss_mib": 1268.0,
+      "peak_mib": 1318.9,
+      "t_s": 28.8
+     },
+     {
+      "stage": "mtbdd build done [asym_3p/full-family]",
+      "rss_mib": 1444.4,
+      "peak_mib": 1471.5,
+      "t_s": 51.4
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 3688,
+     "tree_lines": 119521,
+     "main_lines": 88822,
+     "total_lines": 119688,
+     "surviving_features": [
+      "nW",
+      "nB",
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R",
+      "e_A",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dx_D2"
+     ],
+     "used_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37
+     ]
+    },
+    "verification": {
+     "verified_states": 1909806,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 4.575,
+     "us_per_state_dict_raw": 0.09
+    }
+   }
+  },
+  "n5_four_pawn": {
+   "n": 5,
+   "family_cli": "four_pawn",
+   "mem_ceiling_mib": 3400,
+   "result": {
+    "mode": "full-family",
+    "family": "four_pawn",
+    "kind": "d7",
+    "states": 4657278,
+    "canonical_orbits": 1164562,
+    "bare_canonical_orbits": 0,
+    "non_bare_rows": 1164562,
+    "orbit_size_histogram": {
+     "2": 970,
+     "4": 4656308
+    },
+    "homogeneity_violations": 0,
+    "mtbdd": {
+     "nodes": 57667,
+     "paths": 191504,
+     "max_depth": 24
+    },
+    "win_loss_bdds": null,
+    "stages": [
+     {
+      "stage": "load/orbit start [four_pawn/full-family] (4,657,278 states)",
+      "rss_mib": 898.9,
+      "peak_mib": 1001.6,
+      "t_s": 0.9
+     },
+     {
+      "stage": "orbit quotient done [four_pawn/full-family]",
+      "rss_mib": 1086.4,
+      "peak_mib": 1157.4,
+      "t_s": 58.3
+     },
+     {
+      "stage": "sort rows [four_pawn/full-family]",
+      "rss_mib": 1736.5,
+      "peak_mib": 1770.8,
+      "t_s": 68.5
+     },
+     {
+      "stage": "rows ready [four_pawn/full-family] (1,164,562 rows)",
+      "rss_mib": 1854.3,
+      "peak_mib": 1978.6,
+      "t_s": 72.7
+     },
+     {
+      "stage": "feature extraction done [four_pawn/full-family] (1,164,562 rows)",
+      "rss_mib": 1854.3,
+      "peak_mib": 1978.6,
+      "t_s": 72.7
+     },
+     {
+      "stage": "mtbdd build start [four_pawn/full-family]",
+      "rss_mib": 1854.3,
+      "peak_mib": 1978.6,
+      "t_s": 72.7
+     },
+     {
+      "stage": "mtbdd build done [four_pawn/full-family]",
+      "rss_mib": 2034.2,
+      "peak_mib": 2048.5,
+      "t_s": 122.7
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 8179,
+     "tree_lines": 273472,
+     "main_lines": 204868,
+     "total_lines": 273639,
+     "surviving_features": [
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R",
+      "e_A",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dx_D2"
+     ],
+     "used_indices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37
+     ]
+    },
+    "verification": {
+     "verified_states": 2500000,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 5.249,
+     "us_per_state_dict_raw": 0.091
+    }
+   }
+  },
+  "n5_full": {
+   "n": 5,
+   "family_cli": "full",
+   "mem_ceiling_mib": 3400,
+   "mode": "full",
+   "result": {
+    "mode": "full",
+    "family": "full",
+    "kind": "d7",
+    "states": 6744724,
+    "canonical_orbits": 1686693,
+    "bare_canonical_orbits": 234,
+    "non_bare_rows": 1686459,
+    "orbit_size_histogram": {
+     "2": 2048,
+     "4": 6742676
+    },
+    "homogeneity_violations": 0,
+    "feature_basis": {
+     "semantic_features": 50,
+     "tail": 6,
+     "tail_used": true,
+     "distinct_semantic_rows": 1686459,
+     "semantic_conflicting_groups": 0,
+     "distinct_full_rows": 1686459,
+     "full_conflicting_groups": 0,
+     "names": [
+      "nW",
+      "nB",
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "dy_p",
+      "e_R",
+      "e_A",
+      "e_D",
+      "e_p",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dy_A2",
+      "dx_D2",
+      "dy_D2",
+      "blk_R_D2",
+      "blk_A2_Dp",
+      "blk_A2_D2",
+      "cap_A2",
+      "cap_D2",
+      "Rcap_D2",
+      "Dpcap_R",
+      "pass_R",
+      "pass_Dp",
+      "e_A2",
+      "e_D2",
+      "cwk",
+      "cbk",
+      "cw1",
+      "cw2",
+      "cb1",
+      "cb2"
+     ]
+    },
+    "mtbdd": {
+     "nodes": 78305,
+     "paths": 275358,
+     "max_depth": 26
+    },
+    "win_loss_bdds": null,
+    "stages": [
+     {
+      "stage": "load/orbit start [full/full] (6,744,724 states)",
+      "rss_mib": 904.7,
+      "peak_mib": 1001.7,
+      "t_s": 0.8
+     },
+     {
+      "stage": "orbit quotient done [full/full]",
+      "rss_mib": 925.5,
+      "peak_mib": 1214.5,
+      "t_s": 82.7
+     },
+     {
+      "stage": "sort rows [full/full]",
+      "rss_mib": 1868.5,
+      "peak_mib": 1930.0,
+      "t_s": 96.2
+     },
+     {
+      "stage": "rows ready [full/full] (1,686,459 rows)",
+      "rss_mib": 2035.7,
+      "peak_mib": 2215.7,
+      "t_s": 102.0
+     },
+     {
+      "stage": "feature extraction done [full/full] (1,686,459 rows)",
+      "rss_mib": 2035.7,
+      "peak_mib": 2215.7,
+      "t_s": 102.0
+     },
+     {
+      "stage": "mtbdd build start [full/full]",
+      "rss_mib": 2035.7,
+      "peak_mib": 2215.7,
+      "t_s": 102.0
+     },
+     {
+      "stage": "mtbdd build done [full/full]",
+      "rss_mib": 2229.0,
+      "peak_mib": 2238.2,
+      "t_s": 161.2
+     }
+    ],
+    "emission": {
+     "emitted": true,
+     "helpers": 11492,
+     "tree_lines": 385060,
+     "main_lines": 285793,
+     "total_lines": 385227,
+     "surviving_features": [
+      "nW",
+      "nB",
+      "rwhite",
+      "tau",
+      "t_R",
+      "dt",
+      "t_A2",
+      "t_D2",
+      "rnext",
+      "A2next",
+      "Dpnext",
+      "blocked",
+      "d_DPR",
+      "d_DpR",
+      "d_APD",
+      "opp",
+      "d_AK",
+      "x_A_rel",
+      "x_D_rel",
+      "d_APR",
+      "d_ApR",
+      "a_chk",
+      "d_chk",
+      "dy_A",
+      "dy_D",
+      "dx_p",
+      "e_R",
+      "e_A",
+      "d_KA_A2",
+      "d_KD_A2",
+      "d_KA_D2",
+      "d_KD_D2",
+      "dx_A2",
+      "dx_D2"
+     ],
+     "used_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37
+     ]
+    },
+    "verification": {
+     "verified_states": 2000000,
+     "value_mismatches": 0,
+     "absolute_mismatches": 0,
+     "breaks_vs_frozen_psi": 0,
+     "us_per_state_algebraic": 4.973,
+     "us_per_state_dict_raw": 0.095
+    }
+   },
+   "per_family": {
+    "duel": {
+     "mode": "full-family",
+     "states": 177640,
+     "nodes": 3917,
+     "depth": 16,
+     "ratio": 45.4
+    },
+    "asym_3p": {
+     "mode": "full-family",
+     "states": 1909806,
+     "nodes": 23034,
+     "depth": 22,
+     "ratio": 82.9
+    },
+    "four_pawn": {
+     "mode": "full-family",
+     "states": 4657278,
+     "nodes": 57667,
+     "depth": 24,
+     "ratio": 80.8
+    }
+   },
+   "router_total_nodes": 84618
+  }
+ },
+ "comparison": {
+  "n4_repo_reference": {
+   "duel": [
+    652,
+    15
+   ],
+   "asym_3p": [
+    2050,
+    19
+   ],
+   "four_pawn": [
+    2183,
+    21
+   ],
+   "router_total_nodes": 4885,
+   "router_ratio": "1:31.7"
+  },
+  "n4_generalized": {
+   "duel": [
+    652,
+    15
+   ],
+   "asym_3p": [
+    2050,
+    19
+   ],
+   "four_pawn": [
+    2183,
+    21
+   ],
+   "router_total_nodes": 4885,
+   "byte_diff_vs_repo_emitted": "1 provenance header line each"
+  },
+  "n5": {
+   "duel": {
+    "states": 177640,
+    "nodes": 3917,
+    "depth": 16,
+    "ratio": "1:45.4",
+    "mode": "full-family",
+    "verify": "all 177,640 states, 0 mismatches"
+   },
+   "asym_3p": {
+    "states": 1909806,
+    "nodes": 23034,
+    "depth": 22,
+    "ratio": "1:82.9",
+    "mode": "full-family",
+    "verify": "all 1,909,806 states, 0 mismatches"
+   },
+   "four_pawn": {
+    "states": 4657278,
+    "nodes": 57667,
+    "depth": 24,
+    "ratio": "1:80.8",
+    "mode": "full-family",
+    "verify": "2,500,000-state seeded subset, 0 mismatches"
+   },
+   "full_space_single_mtbdd": {
+    "states": 6744724,
+    "orbits": 1686693,
+    "rows": 1686459,
+    "nodes": 78305,
+    "paths": 275358,
+    "depth": 26,
+    "ratio": "1:86.1",
+    "mode": "full",
+    "verify": "2,000,000-state seeded subset, 0 mismatches",
+    "emitted": "full_space_algebraic.py (385,060 lines)"
+   },
+   "router_total_nodes": 84618,
+   "router_ratio": "1:79.7"
+  },
+  "n3_duel_sanity": {
+   "states": 604,
+   "orbits": 154,
+   "orbit_sizes": {
+    "4": 592,
+    "2": 12
+   },
+   "nodes": 59,
+   "depth": 10,
+   "verify": "all 604 states, 0 mismatches"
+  }
+ },
+ "ladder_history": {
+  "step1_full_space": "SUCCEEDED in final state (mode = full). Two earlier attempts aborted at the mtbdd-build stage before two memory fixes: (a) build RSS hit the 3,400 MiB guard with an unbounded interval memo; (b) one OOM kill during fork-time verification. Fixes: bounded CTX memo (cap 1.5M entries; the interval memo never hits because each level's intervals partition the rows, so it cannot change the built tree - N=4 trust gates re-validated byte-identical after the change), build-memory release before forking the verifier, slim int32 verifier arrays, ids_list freed after the orbit pass.",
+  "step2_2x2_only": "not needed (full space succeeded); the four_pawn full-family build now also succeeds standalone (57,667 nodes)",
+  "step3_sampled": "not needed"
+ },
+ "questions": {
+  "q1_feature_conflicts": {
+   "n4": "24 semantic features (duel) / 50+6 (asym,4p): 0 semantic conflicts; duel tail NOT triggered",
+   "n5": "0 semantic conflicts on canonical rows for duel, asym_3p, four_pawn AND the full space (distinct semantic rows == distinct full rows in every build); tail coordinates needed: 0"
+  },
+  "q2_ratio": "IMPROVES. Full space 1:86.1 (was extrapolated 1:31.7-equivalent at N=4); per-family duel 26.0->45.4, asym 36.3->82.9, 4p 29.1->80.8; router total 1:31.7 -> 1:79.7",
+  "q3_depth": "essentially linear in N: 21 -> 26 (x1.24 for N=1.25); per-family duel 15->16, asym 19->22, 4p 21->24",
+  "q4_feature_survival": {
+   "duel": "20 of 24 survive at N=5 (21 of 24 at N=4); dropped e_A, e_D; newly essential dy_p; no tail coordinate survives",
+   "asym_3p": "34 of 56 (35 at N=4); dropped e_D; no new; no tail coordinate survives",
+   "four_pawn": "32 of 56 (32 at N=4); dropped e_D; newly essential d_ApR; no tail coordinate survives",
+   "full_space": "34 of 56; vs N=4 4p dropped e_D, newly essential nW, nB (material-class separation) and d_ApR; no tail coordinate survives"
+  },
+  "q5_orbits": {
+   "n4": "all orbits size 4 (no fixed files under H at even N)",
+   "n5_full": {
+    "size_4": 1685669,
+    "size_2": 1024,
+    "size_1": 0
+   },
+   "n5_by_family": {
+    "duel": {
+     "size_4": 44366,
+     "size_2": 88
+    },
+    "asym_3p": {
+     "size_4": 477226,
+     "size_2": 451
+    },
+    "four_pawn": {
+     "size_4": 1164077,
+     "size_2": 485
+    }
+   },
+   "interpretation": "size-2 orbits are states invariant under H (x -> N-1-x fixes the middle file at odd N); size-1 orbits would additionally require V'-fixing, impossible because V' flips tau - none found"
+  }
+ }
+}

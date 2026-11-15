@@ -1,0 +1,364 @@
+{
+ "phase": "K2P+N Z3 injectivity v2 - signed-offset basis fix (this phase)",
+ "date": "2026-11-15",
+ "question": "phi(s1) == phi(s2) ==> VAL(s1) == VAL(s2) on every legal pair of a material class - the precondition for replacing states by feature vectors in the MTBDD compiler (sufficient condition for correct compilation; says nothing about ratios)",
+ "basis_v1": {
+  "definition": "5 king (tau, d_AK, opp, e_w, e_b) + 13 knight (nW, nB, k_dist, katt_*, kchk_*, k_*_own/enemy, k_atk_*) [+ 14 pawn] - the basis of every committed compression run",
+  "feature_counts": {
+   "kn": 18,
+   "pawn_classes": 32
+  }
+ },
+ "basis_v2": {
+  "definition": "basis_v1 + 8 signed knight offsets (k_dx_w, k_dy_w, k_dx_b, k_dy_b: knight->OWN king; k_dxe_w, k_dye_w, k_dxe_b, k_dye_b: knight->ENEMY king; signed per-axis delta king - piece, -1/-1 when the piece is absent) + 2 king rank-edge distances (re_w, re_b = min(y, N-1-y)) [+ 8 signed pawn offsets (p_dx_*, p_dy_*: pawn->OWN king; p_dxe_*, p_dye_*: pawn->ENEMY king)]",
+  "feature_counts": {
+   "kn": 28,
+   "pawn_classes": 50
+  },
+  "implementation": "k2pn_basis.py v2 API (class_features_v2; the v1 API is unchanged) + z3_injectivity.py --basis v2"
+ },
+ "minimality_ladder": {
+  "provenance": "measured with probe_signed_fix.py + probe2_minimality.py (empirical bucketing over the full classes, no Z3); 'A' = knight->own signed offsets, 'B' = knight->enemy signed offsets, 'C' = king rank-edge distances, 'D' = pawn->own signed offsets, 'E' = pawn->enemy signed offsets, 'O' = opp orientation split",
+  "v1_conflicts": {
+   "kn_n3": 4,
+   "kn_n4": 6,
+   "kn_n5": 6,
+   "kpn_n4": 518,
+   "kpn_n5": 4004,
+   "mirror_n4": 2946,
+   "both_n4": 17892
+  },
+  "A_only_conflicts": {
+   "kn_n3": 4,
+   "kn_n4": 8,
+   "kn_n5": 16,
+   "kpn_n4": 774,
+   "kpn_n5": 8192,
+   "mirror_n4": 3186,
+   "both_n4": 7674
+  },
+  "B_only_conflicts": {
+   "kn_n3": 4,
+   "kn_n4": 8,
+   "kn_n5": 8,
+   "kpn_n4": 538,
+   "kpn_n5": 6305,
+   "mirror_n4": 3202,
+   "both_n4": 8054
+  },
+  "AB_conflicts": {
+   "kn_n3": 8,
+   "kn_n4": 8,
+   "kn_n5": 8,
+   "kpn_n4": 441,
+   "kpn_n5": 6932,
+   "mirror_n4": 2097,
+   "both_n4": 7400
+  },
+  "findings": [
+   "signed knight offsets ALONE (own, enemy, or both) close NO class - the naive fix hypothesis is refuted; every class keeps conflicts",
+   "knight-only classes (K+N vs K+N, all N): A or B plus the king rank-edge distances closes ({A,C} = 0 and {B,C} = 0 on kn N=3/4/5); rank-edge is REQUIRED (AB without C still has 8 conflict buckets)",
+   "pawn classes: A+B plus signed pawn offsets closes ({A,B,D} = 0 and {A,B,E} = 0 on kpn/mirror/both); the rank-edge pair C is redundant there",
+   "the opp orientation split (O: same-file vs same-rank alignment) changes nothing on any class - redundant",
+   "the uniform v2 basis (A+B+C+D+E) is therefore mildly overdetermined by design: chosen for a single class-independent definition, not per-class minimality"
+  ]
+ },
+ "classes": {
+  "kn_n3": {
+   "material": "K+N vs K+N",
+   "n": 3,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 18,
+    "distinct_feature_vectors": 290,
+    "max_bucket": 24,
+    "conflict_buckets": 4,
+    "class_states": 2112,
+    "empirical_time_s": 0.0,
+    "certified_counterexamples": 4,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "PROVED",
+    "feature_count": 28,
+    "distinct_feature_vectors": 2112,
+    "max_bucket": 1,
+    "conflict_buckets": 0,
+    "class_states": 2112,
+    "empirical_time_s": 0.0,
+    "z3_full": {
+     "result": "unsat",
+     "time_s": 1.66,
+     "array_states": 2112
+    },
+    "verdict_meaning": "no legal class states with identical feature vectors and different VAL - the basis is value-sufficient on this class (Z3 unsat over the full class)"
+   }
+  },
+  "kn_n4": {
+   "material": "K+N vs K+N",
+   "n": 4,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 18,
+    "distinct_feature_vectors": 6328,
+    "max_bucket": 76,
+    "conflict_buckets": 6,
+    "class_states": 46384,
+    "empirical_time_s": 0.02,
+    "certified_counterexamples": 6,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "PROVED_ON_SUBSPACE",
+    "feature_count": 28,
+    "distinct_feature_vectors": 46288,
+    "max_bucket": 2,
+    "conflict_buckets": 0,
+    "class_states": 46384,
+    "empirical_time_s": 0.03,
+    "z3_full": {
+     "result": "unknown",
+     "time_s": 240.66,
+     "array_states": 46384
+    },
+    "z3_subspace": {
+     "result": "unsat",
+     "time_s": 2.46,
+     "array_states": 6591,
+     "wk_lt": 2,
+     "fraction": 0.1421
+    },
+    "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 2, 14.2% of the class); full-class proof exceeded the budget; empirical layer clean on the full class (46,384 states, 46,288 feature vectors)"
+   }
+  },
+  "kn_n5": {
+   "material": "K+N vs K+N",
+   "n": 5,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 18,
+    "distinct_feature_vectors": 55312,
+    "max_bucket": 76,
+    "conflict_buckets": 6,
+    "class_states": 391072,
+    "empirical_time_s": 0.2,
+    "certified_counterexamples": 6,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "PROVED_ON_SUBSPACE",
+    "feature_count": 28,
+    "distinct_feature_vectors": 390496,
+    "max_bucket": 2,
+    "conflict_buckets": 0,
+    "class_states": 391072,
+    "empirical_time_s": 0.39,
+    "z3_full": {
+     "result": "SKIPPED",
+     "reason": "class has 391,072 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+    },
+    "z3_subspace": {
+     "result": "unsat",
+     "time_s": 18.65,
+     "array_states": 18568,
+     "wk_lt": 1,
+     "fraction": 0.0475
+    },
+    "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 1, 4.7% of the class); full-class axiomatisation skipped (class size); empirical layer clean on the full class (391,072 states, 390,496 feature vectors)"
+   }
+  },
+  "kpn_n4": {
+   "material": "K+P+N vs K",
+   "n": 4,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 32,
+    "distinct_feature_vectors": 5469,
+    "max_bucket": 48,
+    "conflict_buckets": 518,
+    "class_states": 25178,
+    "empirical_time_s": 0.01,
+    "certified_counterexamples": 12,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "PROVED_ON_SUBSPACE",
+    "feature_count": 50,
+    "distinct_feature_vectors": 25146,
+    "max_bucket": 2,
+    "conflict_buckets": 0,
+    "class_states": 25178,
+    "empirical_time_s": 0.02,
+    "z3_full": {
+     "result": "unknown",
+     "time_s": 180.33,
+     "array_states": 25178
+    },
+    "z3_subspace": {
+     "result": "unsat",
+     "time_s": 1.86,
+     "array_states": 3640,
+     "wk_lt": 2,
+     "fraction": 0.1446
+    },
+    "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 2, 14.5% of the class); full-class proof exceeded the budget; empirical layer clean on the full class (25,178 states, 25,146 feature vectors)"
+   }
+  },
+  "kpn_n5": {
+   "material": "K+P+N vs K",
+   "n": 5,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 32,
+    "distinct_feature_vectors": 39307,
+    "max_bucket": 88,
+    "conflict_buckets": 4004,
+    "class_states": 249728,
+    "empirical_time_s": 0.14,
+    "certified_counterexamples": 12,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "PROVED_ON_SUBSPACE",
+    "feature_count": 50,
+    "distinct_feature_vectors": 249536,
+    "max_bucket": 2,
+    "conflict_buckets": 0,
+    "class_states": 249728,
+    "empirical_time_s": 0.25,
+    "z3_full": {
+     "result": "SKIPPED",
+     "reason": "class has 249,728 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+    },
+    "z3_subspace": {
+     "result": "unsat",
+     "time_s": 22.8,
+     "array_states": 22375,
+     "wk_lt": 2,
+     "fraction": 0.0896
+    },
+    "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 2, 9.0% of the class); full-class axiomatisation skipped (class size); empirical layer clean on the full class (249,728 states, 249,536 feature vectors)"
+   }
+  },
+  "mirror_n4": {
+   "material": "K+P vs K+P+N",
+   "n": 4,
+   "before_v1": {
+    "verdict": "MIRROR_SYMMETRY_VERIFIED",
+    "feature_count": 32,
+    "distinct_feature_vectors": 43489,
+    "max_bucket": 44,
+    "conflict_buckets": 2946,
+    "class_states": 136068,
+    "empirical_time_s": 0.08,
+    "z3_mirror_symmetry": {
+     "result": "unsat",
+     "time_s": 0.17
+    },
+    "cross_oracle_mirror_val": {
+     "states": 136068,
+     "mismatches": 0,
+     "reference": "out_class_both_n4"
+    },
+    "verdict_meaning": "Z3 proved the feature basis is colour-symmetric under V' (phi commutes with the mirror, VAL-free symbolic proof) and mover-relative VAL is preserved across independent oracle runs; this says NOTHING about value-sufficiency - see conflict_buckets for the REFUTED status"
+   },
+   "after_v2": {
+    "verdict": "PROVED_ON_SUBSPACE",
+    "feature_count": 50,
+    "distinct_feature_vectors": 136068,
+    "max_bucket": 1,
+    "conflict_buckets": 0,
+    "class_states": 136068,
+    "empirical_time_s": 0.13,
+    "z3_full": {
+     "result": "SKIPPED",
+     "reason": "class has 136,068 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+    },
+    "z3_subspace": {
+     "result": "unsat",
+     "time_s": 18.81,
+     "array_states": 20132,
+     "wk_lt": 2,
+     "fraction": 0.148
+    },
+    "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 2, 14.8% of the class); full-class axiomatisation skipped (class size); empirical layer clean on the full class (136,068 states, 136,068 feature vectors)"
+   },
+   "mirror_proof_v2": {
+    "verdict": "MIRROR_SYMMETRY_VERIFIED",
+    "feature_count": 50,
+    "distinct_feature_vectors": 136068,
+    "max_bucket": 1,
+    "conflict_buckets": 0,
+    "class_states": 136068,
+    "empirical_time_s": 0.12,
+    "z3_mirror_symmetry": {
+     "result": "unsat",
+     "time_s": 0.25
+    },
+    "cross_oracle_mirror_val": {
+     "states": 136068,
+     "mismatches": 0,
+     "reference": "out_class_both_n4"
+    },
+    "verdict_meaning": "Z3 proved the feature basis is colour-symmetric under V' (phi commutes with the mirror, VAL-free symbolic proof) and mover-relative VAL is preserved across independent oracle runs; this says NOTHING about value-sufficiency - see conflict_buckets for the REFUTED status"
+   }
+  },
+  "both_n4": {
+   "material": "K+P+N vs K+P+N",
+   "n": 4,
+   "before_v1": {
+    "verdict": "REFUTED",
+    "feature_count": 32,
+    "distinct_feature_vectors": 568978,
+    "max_bucket": 56,
+    "conflict_buckets": 17892,
+    "class_states": 1358808,
+    "empirical_time_s": 1.26,
+    "certified_counterexamples": 12,
+    "verdict_meaning": "the extended basis is NOT value-sufficient on this class: feature-equal states with different oracle VAL exist (Z3-certified); the MTBDD needs the coordinate tail or stronger features"
+   },
+   "after_v2": {
+    "verdict": "EMPIRICAL_ONLY",
+    "feature_count": 50,
+    "distinct_feature_vectors": 1358808,
+    "max_bucket": 1,
+    "conflict_buckets": 0,
+    "class_states": 1358808,
+    "empirical_time_s": 1.82,
+    "z3_full": {
+     "result": "SKIPPED",
+     "reason": "class has 1,358,808 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+    },
+    "z3_subspace": {
+     "result": "SKIPPED",
+     "reason": "the 10% subspace has 199,738 states > --max-proof-states 60,000"
+    },
+    "verdict_meaning": "no Z3 proof attempted within the array-size cap; value-sufficiency rests on the empirical layer: 0 conflicts over the full class (1,358,808 states, 1,358,808 feature vectors)"
+   }
+  }
+ },
+ "summary": {
+  "headline": "the v2 signed-offset basis is value-sufficient on ALL 7 tested classes: 0 conflict buckets after the fix (v1: 4 / 6 / 6 / 518 / 4,004 / 2,946 / 17,892); Z3 full-class proof on kn N=3, bounded subspace proofs on kn N=4/5, kpn N=4/5, mirror N=4, and a perfect-injectivity empirical layer on both N=4 (1,358,808 states -> 1,358,808 distinct vectors)",
+  "closure": "all 7 classes",
+  "proofs": {
+   "PROVED_full_class": [
+    "kn_n3"
+   ],
+   "PROVED_ON_SUBSPACE": [
+    "kn_n4",
+    "kn_n5",
+    "kpn_n4",
+    "kpn_n5",
+    "mirror_n4"
+   ],
+   "MIRROR_SYMMETRY_VERIFIED": [
+    "mirror_n4 (phi commutes with V', unsat 0.3s; 136,068 cross-oracle VAL agreements)"
+   ],
+   "EMPIRICAL_ONLY": [
+    "both_n4 (proofs skipped: 1.36M-state array axiomatisation exceeds the budget)"
+   ]
+  }
+ },
+ "z3_version": "5.4.1",
+ "companion_files": "per-class raw results in scripts_general/out_class_*/z3_injectivity_v2*.json; minimality probes in scripts_general/probe_signed_fix.py, probe2_minimality.py"
+}

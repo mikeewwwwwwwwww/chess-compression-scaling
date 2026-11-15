@@ -1,0 +1,30 @@
+{
+ "n": 4,
+ "class": "mirror",
+ "mat": [
+  1,
+  1,
+  0,
+  1
+ ],
+ "class_states": 136068,
+ "feature_count": 32,
+ "distinct_feature_vectors": 43489,
+ "max_bucket": 44,
+ "conflict_buckets": 2946,
+ "empirical_time_s": 0.08,
+ "z3_mirror_symmetry": {
+  "result": "unsat",
+  "time_s": 0.17
+ },
+ "verdict": "MIRROR_SYMMETRY_VERIFIED",
+ "verdict_meaning": "Z3 proved the feature basis is colour-symmetric under V' (phi commutes with the mirror, VAL-free symbolic proof) and mover-relative VAL is preserved across independent oracle runs; this says NOTHING about value-sufficiency - see conflict_buckets for the REFUTED status",
+ "z3_time_s": 0.17056727409362793,
+ "cross_oracle_mirror_val": {
+  "states": 136068,
+  "mismatches": 0,
+  "reference": "out_class_both_n4"
+ },
+ "z3_version": "5.4.1",
+ "total_time_s": 7.34
+}

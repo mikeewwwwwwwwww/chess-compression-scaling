@@ -1,0 +1,3769 @@
+{
+ "meta": {
+  "experiment": "E4 re-run: mutual-zugzwang signature (post-outage re-run, 2026-11-15)",
+  "definition": "placement is MZZ iff VAL[base]==2 AND VAL[base+1]==2 (both tempos are mover-losses)",
+  "oracle": "scripts_general/out_n{4,5}/phase1_values.npz (VAL only; solver NOT re-run)",
+  "n4_durable_crosscheck": "phase7b_results.json mutual_zugzwang_exact = 16 states = 8 placements x 2 tempos"
+ },
+ "N4": {
+  "N": 4,
+  "expected_placements": 8,
+  "mzz_placements": 8,
+  "mzz_states": 16,
+  "matches_expectation": true,
+  "aggregate": {
+   "pct_push_blocked": 100.0,
+   "pct_king_pawn_adjacent": 100.0,
+   "pct_combined_blocked_or_adjacent": 100.0
+  },
+  "family_breakdown": {
+   "duel": {
+    "placements": 4,
+    "pct": 50.0
+   },
+   "asym_3p": {
+    "placements": 0,
+    "pct": 0.0
+   },
+   "four_pawn": {
+    "placements": 4,
+    "pct": 50.0
+   }
+  },
+  "mechanism_distribution": {
+   "push_blocked_only": {
+    "count": 0,
+    "pct": 0.0,
+    "def": "push_blocked AND NOT king-pawn adjacent"
+   },
+   "adjacency_gridlock": {
+    "count": 0,
+    "pct": 0.0,
+    "def": "NOT push_blocked AND king-pawn adjacent"
+   },
+   "pure_blockade_wall": {
+    "count": 8,
+    "pct": 100.0,
+    "def": "push_blocked AND king-pawn adjacent"
+   }
+  },
+  "counterexamples_neither_push_blocked_nor_adjacent": [],
+  "placements": [
+   {
+    "base_sid": 34362,
+    "wk": 1,
+    "bk": 13,
+    "w_pawns": [
+     4,
+     9
+    ],
+    "b_pawns": [
+     5,
+     8
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 34856,
+    "wk": 1,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     5,
+     10
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 54150,
+    "wk": 2,
+    "bk": 14,
+    "w_pawns": [
+     5,
+     10
+    ],
+    "b_pawns": [
+     6,
+     9
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 54554,
+    "wk": 2,
+    "bk": 14,
+    "w_pawns": [
+     7,
+     10
+    ],
+    "b_pawns": [
+     6,
+     11
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 145282,
+    "wk": 8,
+    "bk": 6,
+    "w_pawns": [
+     5
+    ],
+    "b_pawns": [
+     9
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 163042,
+    "wk": 9,
+    "bk": 7,
+    "w_pawns": [
+     6
+    ],
+    "b_pawns": [
+     10
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 175372,
+    "wk": 10,
+    "bk": 4,
+    "w_pawns": [
+     5
+    ],
+    "b_pawns": [
+     9
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 189592,
+    "wk": 11,
+    "bk": 5,
+    "w_pawns": [
+     6
+    ],
+    "b_pawns": [
+     10
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   }
+  ]
+ },
+ "N5": {
+  "N": 5,
+  "expected_placements": 168,
+  "mzz_placements": 168,
+  "mzz_states": 336,
+  "matches_expectation": true,
+  "aggregate": {
+   "pct_push_blocked": 92.86,
+   "pct_king_pawn_adjacent": 98.81,
+   "pct_combined_blocked_or_adjacent": 100.0
+  },
+  "family_breakdown": {
+   "duel": {
+    "placements": 12,
+    "pct": 7.14
+   },
+   "asym_3p": {
+    "placements": 0,
+    "pct": 0.0
+   },
+   "four_pawn": {
+    "placements": 156,
+    "pct": 92.86
+   }
+  },
+  "mechanism_distribution": {
+   "push_blocked_only": {
+    "count": 2,
+    "pct": 1.19,
+    "def": "push_blocked AND NOT king-pawn adjacent"
+   },
+   "adjacency_gridlock": {
+    "count": 12,
+    "pct": 7.14,
+    "def": "NOT push_blocked AND king-pawn adjacent"
+   },
+   "pure_blockade_wall": {
+    "count": 154,
+    "pct": 91.67,
+    "def": "push_blocked AND king-pawn adjacent"
+   }
+  },
+  "counterexamples_neither_push_blocked_nor_adjacent": [],
+  "placements": [
+   {
+    "base_sid": 170394,
+    "wk": 0,
+    "bk": 11,
+    "w_pawns": [
+     8,
+     12
+    ],
+    "b_pawns": [
+     5,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 572204,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     7
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 572386,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     8
+    ],
+    "b_pawns": [
+     6,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 572564,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     9
+    ],
+    "b_pawns": [
+     6,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 572572,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     9
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 573308,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 573494,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     14
+    ],
+    "b_pawns": [
+     6,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 577930,
+    "wk": 1,
+    "bk": 10,
+    "w_pawns": [
+     7,
+     13
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 602510,
+    "wk": 1,
+    "bk": 11,
+    "w_pawns": [
+     8,
+     12
+    ],
+    "b_pawns": [
+     6,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 602568,
+    "wk": 1,
+    "bk": 11,
+    "w_pawns": [
+     8,
+     12
+    ],
+    "b_pawns": [
+     10,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 618792,
+    "wk": 1,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 623042,
+    "wk": 1,
+    "bk": 12,
+    "w_pawns": [
+     7,
+     11
+    ],
+    "b_pawns": [
+     6,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 623414,
+    "wk": 1,
+    "bk": 12,
+    "w_pawns": [
+     7,
+     13
+    ],
+    "b_pawns": [
+     6,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 916950,
+    "wk": 2,
+    "bk": 0,
+    "w_pawns": [
+     6,
+     13
+    ],
+    "b_pawns": [
+     15,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 943564,
+    "wk": 2,
+    "bk": 4,
+    "w_pawns": [
+     8,
+     11
+    ],
+    "b_pawns": [
+     16,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1029644,
+    "wk": 2,
+    "bk": 11,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     7,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1029826,
+    "wk": 2,
+    "bk": 11,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     7,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1030376,
+    "wk": 2,
+    "bk": 11,
+    "w_pawns": [
+     6,
+     12
+    ],
+    "b_pawns": [
+     7,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1034628,
+    "wk": 2,
+    "bk": 11,
+    "w_pawns": [
+     8,
+     12
+    ],
+    "b_pawns": [
+     7,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1050540,
+    "wk": 2,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     11
+    ],
+    "b_pawns": [
+     7,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1050912,
+    "wk": 2,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     7,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1059024,
+    "wk": 2,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     7,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1059396,
+    "wk": 2,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     13
+    ],
+    "b_pawns": [
+     7,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1072730,
+    "wk": 2,
+    "bk": 13,
+    "w_pawns": [
+     5,
+     8
+    ],
+    "b_pawns": [
+     7,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1075120,
+    "wk": 2,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     7,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1075860,
+    "wk": 2,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     12
+    ],
+    "b_pawns": [
+     7,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1080112,
+    "wk": 2,
+    "bk": 13,
+    "w_pawns": [
+     8,
+     12
+    ],
+    "b_pawns": [
+     7,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1487258,
+    "wk": 3,
+    "bk": 12,
+    "w_pawns": [
+     7,
+     11
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1487630,
+    "wk": 3,
+    "bk": 12,
+    "w_pawns": [
+     7,
+     13
+    ],
+    "b_pawns": [
+     8,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1491140,
+    "wk": 3,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1507978,
+    "wk": 3,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     12
+    ],
+    "b_pawns": [
+     8,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1508044,
+    "wk": 3,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     12
+    ],
+    "b_pawns": [
+     14,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1527762,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     5,
+     9
+    ],
+    "b_pawns": [
+     8,
+     10
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1527774,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     5,
+     9
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1530168,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     8,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1532374,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     7,
+     9
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1532742,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     7,
+     11
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1536438,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     9,
+     10
+    ],
+    "b_pawns": [
+     8,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1536624,
+    "wk": 3,
+    "bk": 14,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     8,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 1985574,
+    "wk": 4,
+    "bk": 13,
+    "w_pawns": [
+     6,
+     12
+    ],
+    "b_pawns": [
+     9,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2489958,
+    "wk": 5,
+    "bk": 16,
+    "w_pawns": [
+     8,
+     11
+    ],
+    "b_pawns": [
+     10,
+     13
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2489970,
+    "wk": 5,
+    "bk": 16,
+    "w_pawns": [
+     8,
+     11
+    ],
+    "b_pawns": [
+     10,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2491800,
+    "wk": 5,
+    "bk": 16,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     10,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2491808,
+    "wk": 5,
+    "bk": 16,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     10,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2732818,
+    "wk": 6,
+    "bk": 8,
+    "w_pawns": [
+     5,
+     7
+    ],
+    "b_pawns": [
+     16,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2830916,
+    "wk": 6,
+    "bk": 15,
+    "w_pawns": [
+     8,
+     10
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2832754,
+    "wk": 6,
+    "bk": 15,
+    "w_pawns": [
+     9,
+     10
+    ],
+    "b_pawns": [
+     11,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2834976,
+    "wk": 6,
+    "bk": 15,
+    "w_pawns": [
+     10,
+     13
+    ],
+    "b_pawns": [
+     11,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2835162,
+    "wk": 6,
+    "bk": 15,
+    "w_pawns": [
+     10,
+     14
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 2901540,
+    "wk": 6,
+    "bk": 18,
+    "w_pawns": [
+     9,
+     13
+    ],
+    "b_pawns": [
+     11,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3099266,
+    "wk": 7,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     16,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3100182,
+    "wk": 7,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     13
+    ],
+    "b_pawns": [
+     15,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3122014,
+    "wk": 7,
+    "bk": 9,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     17,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3126796,
+    "wk": 7,
+    "bk": 9,
+    "w_pawns": [
+     8,
+     11
+    ],
+    "b_pawns": [
+     16,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3488278,
+    "wk": 8,
+    "bk": 6,
+    "w_pawns": [
+     7,
+     9
+    ],
+    "b_pawns": [
+     17,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3574988,
+    "wk": 8,
+    "bk": 16,
+    "w_pawns": [
+     5,
+     11
+    ],
+    "b_pawns": [
+     13,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3643770,
+    "wk": 8,
+    "bk": 19,
+    "w_pawns": [
+     5,
+     14
+    ],
+    "b_pawns": [
+     13,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3646160,
+    "wk": 8,
+    "bk": 19,
+    "w_pawns": [
+     6,
+     14
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3653888,
+    "wk": 8,
+    "bk": 19,
+    "w_pawns": [
+     10,
+     14
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 3655362,
+    "wk": 8,
+    "bk": 19,
+    "w_pawns": [
+     11,
+     14
+    ],
+    "b_pawns": [
+     13,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4052902,
+    "wk": 9,
+    "bk": 18,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     10,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4052942,
+    "wk": 9,
+    "bk": 18,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     14,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4055308,
+    "wk": 9,
+    "bk": 18,
+    "w_pawns": [
+     6,
+     13
+    ],
+    "b_pawns": [
+     11,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4055332,
+    "wk": 9,
+    "bk": 18,
+    "w_pawns": [
+     6,
+     13
+    ],
+    "b_pawns": [
+     14,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4321446,
+    "wk": 10,
+    "bk": 7,
+    "w_pawns": [
+     6
+    ],
+    "b_pawns": [
+     11
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4328406,
+    "wk": 10,
+    "bk": 7,
+    "w_pawns": [
+     6,
+     14
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4447996,
+    "wk": 10,
+    "bk": 14,
+    "w_pawns": [
+     9,
+     13
+    ],
+    "b_pawns": [
+     11,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4558436,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     7,
+     16
+    ],
+    "b_pawns": [
+     15,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4560442,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4560444,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     13,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4560458,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     15,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4560462,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     15,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4562290,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     9,
+     16
+    ],
+    "b_pawns": [
+     14,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4568742,
+    "wk": 10,
+    "bk": 21,
+    "w_pawns": [
+     14,
+     16
+    ],
+    "b_pawns": [
+     15,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4665812,
+    "wk": 11,
+    "bk": 1,
+    "w_pawns": [
+     5,
+     7
+    ],
+    "b_pawns": [
+     10,
+     12
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4753758,
+    "wk": 11,
+    "bk": 8,
+    "w_pawns": [
+     7
+    ],
+    "b_pawns": [
+     12
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4756780,
+    "wk": 11,
+    "bk": 8,
+    "w_pawns": [
+     5,
+     7
+    ],
+    "b_pawns": [
+     10,
+     12
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4762724,
+    "wk": 11,
+    "bk": 8,
+    "w_pawns": [
+     7,
+     14
+    ],
+    "b_pawns": [
+     12,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4903222,
+    "wk": 11,
+    "bk": 20,
+    "w_pawns": [
+     9,
+     15
+    ],
+    "b_pawns": [
+     12,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4922284,
+    "wk": 11,
+    "bk": 21,
+    "w_pawns": [
+     7,
+     16
+    ],
+    "b_pawns": [
+     12,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4925032,
+    "wk": 11,
+    "bk": 21,
+    "w_pawns": [
+     9,
+     10
+    ],
+    "b_pawns": [
+     12,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4945208,
+    "wk": 11,
+    "bk": 22,
+    "w_pawns": [
+     7,
+     17
+    ],
+    "b_pawns": [
+     12,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4945210,
+    "wk": 11,
+    "bk": 22,
+    "w_pawns": [
+     7,
+     17
+    ],
+    "b_pawns": [
+     12,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4947264,
+    "wk": 11,
+    "bk": 22,
+    "w_pawns": [
+     8,
+     17
+    ],
+    "b_pawns": [
+     16,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 4949102,
+    "wk": 11,
+    "bk": 22,
+    "w_pawns": [
+     9,
+     17
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5052798,
+    "wk": 12,
+    "bk": 2,
+    "w_pawns": [
+     5,
+     9
+    ],
+    "b_pawns": [
+     10,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 2,
+    "king_pawn_adjacent": false
+   },
+   {
+    "base_sid": 5055020,
+    "wk": 12,
+    "bk": 2,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     13
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5055032,
+    "wk": 12,
+    "bk": 2,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5055050,
+    "wk": 12,
+    "bk": 2,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5117416,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6
+    ],
+    "b_pawns": [
+     11
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5123246,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     13
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5123258,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5123276,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5123432,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     11,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5124376,
+    "wk": 12,
+    "bk": 5,
+    "w_pawns": [
+     6,
+     14
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5140586,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     8
+    ],
+    "b_pawns": [
+     13
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5143580,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     5,
+     8
+    ],
+    "b_pawns": [
+     10,
+     13
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5145988,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     13
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5146000,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5146018,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     6,
+     8
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5150618,
+    "wk": 12,
+    "bk": 9,
+    "w_pawns": [
+     8,
+     10
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5283934,
+    "wk": 12,
+    "bk": 21,
+    "w_pawns": [
+     6,
+     16
+    ],
+    "b_pawns": [
+     11,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5288186,
+    "wk": 12,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5288188,
+    "wk": 12,
+    "bk": 21,
+    "w_pawns": [
+     8,
+     16
+    ],
+    "b_pawns": [
+     13,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5306858,
+    "wk": 12,
+    "bk": 22,
+    "w_pawns": [
+     6,
+     17
+    ],
+    "b_pawns": [
+     11,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5306864,
+    "wk": 12,
+    "bk": 22,
+    "w_pawns": [
+     6,
+     17
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5311112,
+    "wk": 12,
+    "bk": 22,
+    "w_pawns": [
+     8,
+     17
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5311118,
+    "wk": 12,
+    "bk": 22,
+    "w_pawns": [
+     8,
+     17
+    ],
+    "b_pawns": [
+     13,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5329788,
+    "wk": 12,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     11,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5329790,
+    "wk": 12,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5334042,
+    "wk": 12,
+    "bk": 23,
+    "w_pawns": [
+     8,
+     18
+    ],
+    "b_pawns": [
+     13,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5444042,
+    "wk": 13,
+    "bk": 3,
+    "w_pawns": [
+     7,
+     9
+    ],
+    "b_pawns": [
+     12,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5504244,
+    "wk": 13,
+    "bk": 6,
+    "w_pawns": [
+     7
+    ],
+    "b_pawns": [
+     12
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5512268,
+    "wk": 13,
+    "bk": 6,
+    "w_pawns": [
+     7,
+     9
+    ],
+    "b_pawns": [
+     12,
+     14
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5512454,
+    "wk": 13,
+    "bk": 6,
+    "w_pawns": [
+     7,
+     10
+    ],
+    "b_pawns": [
+     12,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5668382,
+    "wk": 13,
+    "bk": 22,
+    "w_pawns": [
+     5,
+     17
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5670770,
+    "wk": 13,
+    "bk": 22,
+    "w_pawns": [
+     6,
+     17
+    ],
+    "b_pawns": [
+     15,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5672952,
+    "wk": 13,
+    "bk": 22,
+    "w_pawns": [
+     7,
+     17
+    ],
+    "b_pawns": [
+     12,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5672954,
+    "wk": 13,
+    "bk": 22,
+    "w_pawns": [
+     7,
+     17
+    ],
+    "b_pawns": [
+     12,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5690540,
+    "wk": 13,
+    "bk": 23,
+    "w_pawns": [
+     5,
+     14
+    ],
+    "b_pawns": [
+     12,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5695878,
+    "wk": 13,
+    "bk": 23,
+    "w_pawns": [
+     7,
+     18
+    ],
+    "b_pawns": [
+     12,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5714204,
+    "wk": 13,
+    "bk": 24,
+    "w_pawns": [
+     5,
+     19
+    ],
+    "b_pawns": [
+     12,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5891072,
+    "wk": 14,
+    "bk": 7,
+    "w_pawns": [
+     8
+    ],
+    "b_pawns": [
+     13
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5901104,
+    "wk": 14,
+    "bk": 7,
+    "w_pawns": [
+     8,
+     10
+    ],
+    "b_pawns": [
+     13,
+     15
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 5917414,
+    "wk": 14,
+    "bk": 10,
+    "w_pawns": [
+     5,
+     11
+    ],
+    "b_pawns": [
+     13,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6123354,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     5,
+     18
+    ],
+    "b_pawns": [
+     10,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6125758,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     11,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6125760,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     11,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6125796,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     15,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6125802,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     6,
+     18
+    ],
+    "b_pawns": [
+     17,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6128008,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     7,
+     18
+    ],
+    "b_pawns": [
+     16,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6133524,
+    "wk": 14,
+    "bk": 23,
+    "w_pawns": [
+     10,
+     18
+    ],
+    "b_pawns": [
+     15,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6392038,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     11
+    ],
+    "b_pawns": [
+     16
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6395386,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6403464,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     14,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6403482,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6406978,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     11,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6407164,
+    "wk": 15,
+    "bk": 12,
+    "w_pawns": [
+     11,
+     14
+    ],
+    "b_pawns": [
+     16,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6462664,
+    "wk": 15,
+    "bk": 17,
+    "w_pawns": [
+     5,
+     8
+    ],
+    "b_pawns": [
+     13,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6464900,
+    "wk": 15,
+    "bk": 17,
+    "w_pawns": [
+     6,
+     7
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6824350,
+    "wk": 16,
+    "bk": 13,
+    "w_pawns": [
+     12
+    ],
+    "b_pawns": [
+     17
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6827248,
+    "wk": 16,
+    "bk": 13,
+    "w_pawns": [
+     5,
+     12
+    ],
+    "b_pawns": [
+     10,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6840554,
+    "wk": 16,
+    "bk": 13,
+    "w_pawns": [
+     12,
+     14
+    ],
+    "b_pawns": [
+     17,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 6876654,
+    "wk": 16,
+    "bk": 18,
+    "w_pawns": [
+     7,
+     8
+    ],
+    "b_pawns": [
+     17,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7188008,
+    "wk": 17,
+    "bk": 10,
+    "w_pawns": [
+     11
+    ],
+    "b_pawns": [
+     16
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7199434,
+    "wk": 17,
+    "bk": 10,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     14,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7211178,
+    "wk": 17,
+    "bk": 14,
+    "w_pawns": [
+     13
+    ],
+    "b_pawns": [
+     18
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7214048,
+    "wk": 17,
+    "bk": 14,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     10,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7574836,
+    "wk": 18,
+    "bk": 11,
+    "w_pawns": [
+     12
+    ],
+    "b_pawns": [
+     17
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7586234,
+    "wk": 18,
+    "bk": 11,
+    "w_pawns": [
+     9,
+     12
+    ],
+    "b_pawns": [
+     14,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7587898,
+    "wk": 18,
+    "bk": 11,
+    "w_pawns": [
+     10,
+     12
+    ],
+    "b_pawns": [
+     15,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7624734,
+    "wk": 18,
+    "bk": 16,
+    "w_pawns": [
+     6,
+     7
+    ],
+    "b_pawns": [
+     15,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7961664,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     13
+    ],
+    "b_pawns": [
+     18
+    ],
+    "family": "duel",
+    "material": [
+     1,
+     1
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7964534,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     10,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7964584,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7972680,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7974698,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     10,
+     13
+    ],
+    "b_pawns": [
+     15,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 7976176,
+    "wk": 19,
+    "bk": 12,
+    "w_pawns": [
+     11,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 8034416,
+    "wk": 19,
+    "bk": 17,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     11,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 8036490,
+    "wk": 19,
+    "bk": 17,
+    "w_pawns": [
+     7,
+     8
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": false,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 8532186,
+    "wk": 20,
+    "bk": 22,
+    "w_pawns": [
+     5,
+     8
+    ],
+    "b_pawns": [
+     13,
+     16
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 8861450,
+    "wk": 21,
+    "bk": 11,
+    "w_pawns": [
+     10,
+     12
+    ],
+    "b_pawns": [
+     15,
+     17
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 9306362,
+    "wk": 22,
+    "bk": 12,
+    "w_pawns": [
+     5,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 9314458,
+    "wk": 22,
+    "bk": 12,
+    "w_pawns": [
+     9,
+     11
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 9316662,
+    "wk": 22,
+    "bk": 12,
+    "w_pawns": [
+     10,
+     14
+    ],
+    "b_pawns": [
+     15,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 2,
+    "king_pawn_adjacent": false
+   },
+   {
+    "base_sid": 9317954,
+    "wk": 22,
+    "bk": 12,
+    "w_pawns": [
+     11,
+     13
+    ],
+    "b_pawns": [
+     16,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 9774272,
+    "wk": 23,
+    "bk": 13,
+    "w_pawns": [
+     12,
+     14
+    ],
+    "b_pawns": [
+     17,
+     19
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   },
+   {
+    "base_sid": 10354100,
+    "wk": 24,
+    "bk": 22,
+    "w_pawns": [
+     6,
+     9
+    ],
+    "b_pawns": [
+     11,
+     18
+    ],
+    "family": "four_pawn",
+    "material": [
+     2,
+     2
+    ],
+    "push_blocked": true,
+    "min_king_pawn_cheb": 1,
+    "king_pawn_adjacent": true
+   }
+  ]
+ },
+ "verdict": {
+  "N4_matches": true,
+  "N5_matches": true,
+  "mechanism_note": "push-blocker or checked king sits Chebyshev-adjacent to its pawn, so MZZ mechanisms partition into push-blocked-only / adjacency-gridlock / pure-blockade-wall (both); counterexamples have neither property."
+ }
+}

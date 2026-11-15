@@ -1,0 +1,41 @@
+{
+ "psi_v7b_global": 154888,
+ "psi_v7b_acc": 1.0,
+ "psi_v7b_S_block_v2": 92292,
+ "psi_v7b_complement": 62596,
+ "baseline_psi_v7a": 151042,
+ "delta": 3846,
+ "mandate1_tails": {
+  "net": 578,
+  "family_states": 12452,
+  "residual_repaired": 578,
+  "residual_draws": 116,
+  "residual_decided": 462,
+  "core_fires": 346,
+  "comp_fires": 232,
+  "verification": "7a retrograde exactness on all 74,340 F3 states (0 value, 0 dtc mismatches)"
+ },
+ "mandate2_eval_4p_2v2": {
+  "net": 3268,
+  "family_states": 63628,
+  "pawn_configs_realized": 420,
+  "edges_in_family": 159688,
+  "edges_asym_leaf": 57840,
+  "truth_decided": 61312,
+  "truth_draws": 2316,
+  "verification": "0 value mismatches, 0 dtc mismatches vs VAL/SDTC on all 63,628 (2,2) states",
+  "residual_repaired": 3268,
+  "residual_draws": 1040,
+  "residual_decided": 2228,
+  "core_fires": 2680,
+  "comp_fires": 588
+ },
+ "global_breaks": 0,
+ "err_to_err": 0,
+ "falsifier_Fp_exact": 88,
+ "falsifier_Fm_exact": 88,
+ "mutual_zugzwang_exact": 16,
+ "residual": 0,
+ "residual_core": 0,
+ "residual_leftover": 0
+}

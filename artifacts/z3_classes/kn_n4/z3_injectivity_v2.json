@@ -1,0 +1,33 @@
+{
+ "n": 4,
+ "class": "kn",
+ "mat": [
+  0,
+  0,
+  1,
+  1
+ ],
+ "basis": "v2",
+ "class_states": 46384,
+ "feature_count": 28,
+ "distinct_feature_vectors": 46288,
+ "max_bucket": 2,
+ "conflict_buckets": 0,
+ "empirical_time_s": 0.03,
+ "z3_full": {
+  "result": "unknown",
+  "time_s": 240.66,
+  "array_states": 46384
+ },
+ "verdict": "PROVED_ON_SUBSPACE",
+ "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 2, 14.2% of the class); full-class proof exceeded the budget; empirical layer clean on the full class (46,384 states, 46,288 feature vectors)",
+ "z3_subspace": {
+  "result": "unsat",
+  "time_s": 2.46,
+  "array_states": 6591,
+  "wk_lt": 2,
+  "fraction": 0.1421
+ },
+ "z3_version": "5.4.1",
+ "total_time_s": 271.77
+}

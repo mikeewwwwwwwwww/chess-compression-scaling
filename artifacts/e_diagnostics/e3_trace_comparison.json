@@ -1,0 +1,1500 @@
+{
+ "traces": {
+  "4/duel": {
+   "depth": 15,
+   "terminal": "draw",
+   "n_distinct_features": 15,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 4152,
+     "rows_after": 2926
+    },
+    {
+     "step": 2,
+     "feature": "blocked",
+     "value_taken": 0,
+     "rows_before": 2926,
+     "rows_after": 2491
+    },
+    {
+     "step": 3,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 2491,
+     "rows_after": 1345
+    },
+    {
+     "step": 4,
+     "feature": "d_DPR",
+     "value_taken": 2,
+     "rows_before": 1345,
+     "rows_after": 419
+    },
+    {
+     "step": 5,
+     "feature": "d_DpR",
+     "value_taken": 2,
+     "rows_before": 419,
+     "rows_after": 259
+    },
+    {
+     "step": 6,
+     "feature": "d_APD",
+     "value_taken": 3,
+     "rows_before": 259,
+     "rows_after": 103
+    },
+    {
+     "step": 7,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 103,
+     "rows_after": 75
+    },
+    {
+     "step": 8,
+     "feature": "d_AK",
+     "value_taken": 2,
+     "rows_before": 75,
+     "rows_after": 43
+    },
+    {
+     "step": 9,
+     "feature": "x_A_rel",
+     "value_taken": 0,
+     "rows_before": 43,
+     "rows_after": 28
+    },
+    {
+     "step": 10,
+     "feature": "x_D_rel",
+     "value_taken": -2,
+     "rows_before": 28,
+     "rows_after": 22
+    },
+    {
+     "step": 11,
+     "feature": "d_APR",
+     "value_taken": 0,
+     "rows_before": 22,
+     "rows_after": 20
+    },
+    {
+     "step": 12,
+     "feature": "d_ApR",
+     "value_taken": 1,
+     "rows_before": 20,
+     "rows_after": 10
+    },
+    {
+     "step": 13,
+     "feature": "dy_D",
+     "value_taken": 0,
+     "rows_before": 10,
+     "rows_after": 6
+    },
+    {
+     "step": 14,
+     "feature": "dx_p",
+     "value_taken": -2,
+     "rows_before": 6,
+     "rows_after": 2
+    },
+    {
+     "step": 15,
+     "feature": "e_R",
+     "value_taken": 0,
+     "rows_before": 2,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "blocked": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_ApR": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "dt": 1,
+    "dx_p": 1,
+    "dy_D": 1,
+    "e_R": 1,
+    "opp": 1,
+    "tau": 1,
+    "x_A_rel": 1,
+    "x_D_rel": 1
+   }
+  },
+  "4/asym_3p": {
+   "depth": 19,
+   "terminal": "loss",
+   "n_distinct_features": 19,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "nW",
+     "value_taken": 2,
+     "rows_before": 18585,
+     "rows_after": 7927
+    },
+    {
+     "step": 2,
+     "feature": "nB",
+     "value_taken": 1,
+     "rows_before": 7927,
+     "rows_after": 6564
+    },
+    {
+     "step": 3,
+     "feature": "rwhite",
+     "value_taken": 0,
+     "rows_before": 6564,
+     "rows_after": 2344
+    },
+    {
+     "step": 4,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 2344,
+     "rows_after": 2111
+    },
+    {
+     "step": 5,
+     "feature": "t_R",
+     "value_taken": 1,
+     "rows_before": 2111,
+     "rows_after": 1572
+    },
+    {
+     "step": 6,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 1572,
+     "rows_after": 1330
+    },
+    {
+     "step": 7,
+     "feature": "t_D2",
+     "value_taken": 2,
+     "rows_before": 1330,
+     "rows_after": 904
+    },
+    {
+     "step": 8,
+     "feature": "rnext",
+     "value_taken": 0,
+     "rows_before": 904,
+     "rows_after": 592
+    },
+    {
+     "step": 9,
+     "feature": "Dpnext",
+     "value_taken": 0,
+     "rows_before": 592,
+     "rows_after": 562
+    },
+    {
+     "step": 10,
+     "feature": "d_DPR",
+     "value_taken": 3,
+     "rows_before": 562,
+     "rows_after": 179
+    },
+    {
+     "step": 11,
+     "feature": "d_DpR",
+     "value_taken": 3,
+     "rows_before": 179,
+     "rows_after": 143
+    },
+    {
+     "step": 12,
+     "feature": "d_APD",
+     "value_taken": 2,
+     "rows_before": 143,
+     "rows_after": 38
+    },
+    {
+     "step": 13,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 38,
+     "rows_after": 31
+    },
+    {
+     "step": 14,
+     "feature": "d_AK",
+     "value_taken": 2,
+     "rows_before": 31,
+     "rows_after": 22
+    },
+    {
+     "step": 15,
+     "feature": "x_A_rel",
+     "value_taken": -1,
+     "rows_before": 22,
+     "rows_after": 19
+    },
+    {
+     "step": 16,
+     "feature": "d_APR",
+     "value_taken": 2,
+     "rows_before": 19,
+     "rows_after": 5
+    },
+    {
+     "step": 17,
+     "feature": "dy_D",
+     "value_taken": -1,
+     "rows_before": 5,
+     "rows_after": 3
+    },
+    {
+     "step": 18,
+     "feature": "d_KA_D2",
+     "value_taken": 1,
+     "rows_before": 3,
+     "rows_after": 2
+    },
+    {
+     "step": 19,
+     "feature": "d_KD_D2",
+     "value_taken": 1,
+     "rows_before": 2,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "Dpnext": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "d_KA_D2": 1,
+    "d_KD_D2": 1,
+    "dt": 1,
+    "dy_D": 1,
+    "nB": 1,
+    "nW": 1,
+    "opp": 1,
+    "rnext": 1,
+    "rwhite": 1,
+    "t_D2": 1,
+    "t_R": 1,
+    "tau": 1,
+    "x_A_rel": 1
+   }
+  },
+  "4/four_pawn": {
+   "depth": 21,
+   "terminal": "draw",
+   "n_distinct_features": 21,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "rwhite",
+     "value_taken": 0,
+     "rows_before": 15907,
+     "rows_after": 7858
+    },
+    {
+     "step": 2,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 7858,
+     "rows_after": 6572
+    },
+    {
+     "step": 3,
+     "feature": "t_R",
+     "value_taken": 1,
+     "rows_before": 6572,
+     "rows_after": 5814
+    },
+    {
+     "step": 4,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 5814,
+     "rows_after": 4627
+    },
+    {
+     "step": 5,
+     "feature": "t_A2",
+     "value_taken": 2,
+     "rows_before": 4627,
+     "rows_after": 3178
+    },
+    {
+     "step": 6,
+     "feature": "t_D2",
+     "value_taken": 2,
+     "rows_before": 3178,
+     "rows_after": 2563
+    },
+    {
+     "step": 7,
+     "feature": "rnext",
+     "value_taken": 0,
+     "rows_before": 2563,
+     "rows_after": 1683
+    },
+    {
+     "step": 8,
+     "feature": "A2next",
+     "value_taken": 1,
+     "rows_before": 1683,
+     "rows_after": 932
+    },
+    {
+     "step": 9,
+     "feature": "Dpnext",
+     "value_taken": 0,
+     "rows_before": 932,
+     "rows_after": 835
+    },
+    {
+     "step": 10,
+     "feature": "d_DPR",
+     "value_taken": 2,
+     "rows_before": 835,
+     "rows_after": 409
+    },
+    {
+     "step": 11,
+     "feature": "d_DpR",
+     "value_taken": 2,
+     "rows_before": 409,
+     "rows_after": 260
+    },
+    {
+     "step": 12,
+     "feature": "d_APD",
+     "value_taken": 1,
+     "rows_before": 260,
+     "rows_after": 79
+    },
+    {
+     "step": 13,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 79,
+     "rows_after": 67
+    },
+    {
+     "step": 14,
+     "feature": "d_AK",
+     "value_taken": 3,
+     "rows_before": 67,
+     "rows_after": 40
+    },
+    {
+     "step": 15,
+     "feature": "x_A_rel",
+     "value_taken": -1,
+     "rows_before": 40,
+     "rows_after": 11
+    },
+    {
+     "step": 16,
+     "feature": "dx_p",
+     "value_taken": -2,
+     "rows_before": 11,
+     "rows_after": 6
+    },
+    {
+     "step": 17,
+     "feature": "e_R",
+     "value_taken": 1,
+     "rows_before": 6,
+     "rows_after": 5
+    },
+    {
+     "step": 18,
+     "feature": "d_KA_A2",
+     "value_taken": 1,
+     "rows_before": 5,
+     "rows_after": 4
+    },
+    {
+     "step": 19,
+     "feature": "d_KD_D2",
+     "value_taken": 1,
+     "rows_before": 4,
+     "rows_after": 3
+    },
+    {
+     "step": 20,
+     "feature": "dx_A2",
+     "value_taken": 0,
+     "rows_before": 3,
+     "rows_after": 2
+    },
+    {
+     "step": 21,
+     "feature": "dx_D2",
+     "value_taken": -2,
+     "rows_before": 2,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "A2next": 1,
+    "Dpnext": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "d_KA_A2": 1,
+    "d_KD_D2": 1,
+    "dt": 1,
+    "dx_A2": 1,
+    "dx_D2": 1,
+    "dx_p": 1,
+    "e_R": 1,
+    "opp": 1,
+    "rnext": 1,
+    "rwhite": 1,
+    "t_A2": 1,
+    "t_D2": 1,
+    "t_R": 1,
+    "tau": 1,
+    "x_A_rel": 1
+   }
+  },
+  "5/duel": {
+   "depth": 16,
+   "terminal": "draw",
+   "n_distinct_features": 16,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 44220,
+     "rows_after": 28287
+    },
+    {
+     "step": 2,
+     "feature": "blocked",
+     "value_taken": 0,
+     "rows_before": 28287,
+     "rows_after": 26488
+    },
+    {
+     "step": 3,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 26488,
+     "rows_after": 12665
+    },
+    {
+     "step": 4,
+     "feature": "d_DPR",
+     "value_taken": 2,
+     "rows_before": 12665,
+     "rows_after": 2892
+    },
+    {
+     "step": 5,
+     "feature": "d_DpR",
+     "value_taken": 2,
+     "rows_before": 2892,
+     "rows_after": 1681
+    },
+    {
+     "step": 6,
+     "feature": "d_APD",
+     "value_taken": 1,
+     "rows_before": 1681,
+     "rows_after": 331
+    },
+    {
+     "step": 7,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 331,
+     "rows_after": 298
+    },
+    {
+     "step": 8,
+     "feature": "d_AK",
+     "value_taken": 3,
+     "rows_before": 298,
+     "rows_after": 140
+    },
+    {
+     "step": 9,
+     "feature": "x_A_rel",
+     "value_taken": -1,
+     "rows_before": 140,
+     "rows_after": 45
+    },
+    {
+     "step": 10,
+     "feature": "x_D_rel",
+     "value_taken": 2,
+     "rows_before": 45,
+     "rows_after": 29
+    },
+    {
+     "step": 11,
+     "feature": "d_APR",
+     "value_taken": 3,
+     "rows_before": 29,
+     "rows_after": 15
+    },
+    {
+     "step": 12,
+     "feature": "d_ApR",
+     "value_taken": 1,
+     "rows_before": 15,
+     "rows_after": 11
+    },
+    {
+     "step": 13,
+     "feature": "a_chk",
+     "value_taken": 0,
+     "rows_before": 11,
+     "rows_after": 10
+    },
+    {
+     "step": 14,
+     "feature": "dy_A",
+     "value_taken": 0,
+     "rows_before": 10,
+     "rows_after": 7
+    },
+    {
+     "step": 15,
+     "feature": "dy_D",
+     "value_taken": 1,
+     "rows_before": 7,
+     "rows_after": 5
+    },
+    {
+     "step": 16,
+     "feature": "dx_p",
+     "value_taken": -2,
+     "rows_before": 5,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "a_chk": 1,
+    "blocked": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_ApR": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "dt": 1,
+    "dx_p": 1,
+    "dy_A": 1,
+    "dy_D": 1,
+    "opp": 1,
+    "tau": 1,
+    "x_A_rel": 1,
+    "x_D_rel": 1
+   }
+  },
+  "5/asym_3p": {
+   "depth": 22,
+   "terminal": "win",
+   "n_distinct_features": 22,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "nW",
+     "value_taken": 1,
+     "rows_before": 477677,
+     "rows_after": 237465
+    },
+    {
+     "step": 2,
+     "feature": "rwhite",
+     "value_taken": 0,
+     "rows_before": 237465,
+     "rows_after": 153223
+    },
+    {
+     "step": 3,
+     "feature": "tau",
+     "value_taken": 1,
+     "rows_before": 153223,
+     "rows_after": 61758
+    },
+    {
+     "step": 4,
+     "feature": "t_R",
+     "value_taken": 1,
+     "rows_before": 61758,
+     "rows_after": 45648
+    },
+    {
+     "step": 5,
+     "feature": "dt",
+     "value_taken": -2,
+     "rows_before": 45648,
+     "rows_after": 20622
+    },
+    {
+     "step": 6,
+     "feature": "t_A2",
+     "value_taken": 3,
+     "rows_before": 20622,
+     "rows_after": 8961
+    },
+    {
+     "step": 7,
+     "feature": "rnext",
+     "value_taken": 0,
+     "rows_before": 8961,
+     "rows_after": 7381
+    },
+    {
+     "step": 8,
+     "feature": "A2next",
+     "value_taken": 0,
+     "rows_before": 7381,
+     "rows_after": 6824
+    },
+    {
+     "step": 9,
+     "feature": "Dpnext",
+     "value_taken": 0,
+     "rows_before": 6824,
+     "rows_after": 6264
+    },
+    {
+     "step": 10,
+     "feature": "d_DPR",
+     "value_taken": 1,
+     "rows_before": 6264,
+     "rows_after": 1432
+    },
+    {
+     "step": 11,
+     "feature": "d_APD",
+     "value_taken": 3,
+     "rows_before": 1432,
+     "rows_after": 352
+    },
+    {
+     "step": 12,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 352,
+     "rows_after": 288
+    },
+    {
+     "step": 13,
+     "feature": "d_AK",
+     "value_taken": 3,
+     "rows_before": 288,
+     "rows_after": 129
+    },
+    {
+     "step": 14,
+     "feature": "x_A_rel",
+     "value_taken": 2,
+     "rows_before": 129,
+     "rows_after": 56
+    },
+    {
+     "step": 15,
+     "feature": "d_APR",
+     "value_taken": 2,
+     "rows_before": 56,
+     "rows_after": 48
+    },
+    {
+     "step": 16,
+     "feature": "d_chk",
+     "value_taken": 1,
+     "rows_before": 48,
+     "rows_after": 33
+    },
+    {
+     "step": 17,
+     "feature": "dy_A",
+     "value_taken": 0,
+     "rows_before": 33,
+     "rows_after": 25
+    },
+    {
+     "step": 18,
+     "feature": "dx_p",
+     "value_taken": -1,
+     "rows_before": 25,
+     "rows_after": 10
+    },
+    {
+     "step": 19,
+     "feature": "e_R",
+     "value_taken": 1,
+     "rows_before": 10,
+     "rows_after": 5
+    },
+    {
+     "step": 20,
+     "feature": "d_KA_A2",
+     "value_taken": 2,
+     "rows_before": 5,
+     "rows_after": 4
+    },
+    {
+     "step": 21,
+     "feature": "d_KD_A2",
+     "value_taken": 3,
+     "rows_before": 4,
+     "rows_after": 3
+    },
+    {
+     "step": 22,
+     "feature": "dx_A2",
+     "value_taken": 0,
+     "rows_before": 3,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "A2next": 1,
+    "Dpnext": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_DPR": 1,
+    "d_KA_A2": 1,
+    "d_KD_A2": 1,
+    "d_chk": 1,
+    "dt": 1,
+    "dx_A2": 1,
+    "dx_p": 1,
+    "dy_A": 1,
+    "e_R": 1,
+    "nW": 1,
+    "opp": 1,
+    "rnext": 1,
+    "rwhite": 1,
+    "t_A2": 1,
+    "t_R": 1,
+    "tau": 1,
+    "x_A_rel": 1
+   }
+  },
+  "5/four_pawn": {
+   "depth": 24,
+   "terminal": "win",
+   "n_distinct_features": 24,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "rwhite",
+     "value_taken": 0,
+     "rows_before": 1164562,
+     "rows_after": 570249
+    },
+    {
+     "step": 2,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 570249,
+     "rows_after": 403026
+    },
+    {
+     "step": 3,
+     "feature": "t_R",
+     "value_taken": 1,
+     "rows_before": 403026,
+     "rows_after": 308140
+    },
+    {
+     "step": 4,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 308140,
+     "rows_after": 181660
+    },
+    {
+     "step": 5,
+     "feature": "t_A2",
+     "value_taken": 2,
+     "rows_before": 181660,
+     "rows_after": 84127
+    },
+    {
+     "step": 6,
+     "feature": "t_D2",
+     "value_taken": 3,
+     "rows_before": 84127,
+     "rows_after": 36259
+    },
+    {
+     "step": 7,
+     "feature": "rnext",
+     "value_taken": 0,
+     "rows_before": 36259,
+     "rows_after": 28594
+    },
+    {
+     "step": 8,
+     "feature": "A2next",
+     "value_taken": 0,
+     "rows_before": 28594,
+     "rows_after": 15174
+    },
+    {
+     "step": 9,
+     "feature": "Dpnext",
+     "value_taken": 0,
+     "rows_before": 15174,
+     "rows_after": 14502
+    },
+    {
+     "step": 10,
+     "feature": "d_DPR",
+     "value_taken": 2,
+     "rows_before": 14502,
+     "rows_after": 5254
+    },
+    {
+     "step": 11,
+     "feature": "d_DpR",
+     "value_taken": 2,
+     "rows_before": 5254,
+     "rows_after": 3244
+    },
+    {
+     "step": 12,
+     "feature": "d_APD",
+     "value_taken": 2,
+     "rows_before": 3244,
+     "rows_after": 1116
+    },
+    {
+     "step": 13,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 1116,
+     "rows_after": 917
+    },
+    {
+     "step": 14,
+     "feature": "d_AK",
+     "value_taken": 2,
+     "rows_before": 917,
+     "rows_after": 403
+    },
+    {
+     "step": 15,
+     "feature": "x_A_rel",
+     "value_taken": 0,
+     "rows_before": 403,
+     "rows_after": 188
+    },
+    {
+     "step": 16,
+     "feature": "x_D_rel",
+     "value_taken": -2,
+     "rows_before": 188,
+     "rows_after": 146
+    },
+    {
+     "step": 17,
+     "feature": "d_APR",
+     "value_taken": 2,
+     "rows_before": 146,
+     "rows_after": 136
+    },
+    {
+     "step": 18,
+     "feature": "dy_D",
+     "value_taken": -1,
+     "rows_before": 136,
+     "rows_after": 108
+    },
+    {
+     "step": 19,
+     "feature": "dx_p",
+     "value_taken": -2,
+     "rows_before": 108,
+     "rows_after": 24
+    },
+    {
+     "step": 20,
+     "feature": "e_R",
+     "value_taken": 2,
+     "rows_before": 24,
+     "rows_after": 12
+    },
+    {
+     "step": 21,
+     "feature": "d_KA_A2",
+     "value_taken": 2,
+     "rows_before": 12,
+     "rows_after": 6
+    },
+    {
+     "step": 22,
+     "feature": "d_KD_A2",
+     "value_taken": 2,
+     "rows_before": 6,
+     "rows_after": 3
+    },
+    {
+     "step": 23,
+     "feature": "d_KA_D2",
+     "value_taken": 1,
+     "rows_before": 3,
+     "rows_after": 2
+    },
+    {
+     "step": 24,
+     "feature": "d_KD_D2",
+     "value_taken": 1,
+     "rows_before": 2,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "A2next": 1,
+    "Dpnext": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "d_KA_A2": 1,
+    "d_KA_D2": 1,
+    "d_KD_A2": 1,
+    "d_KD_D2": 1,
+    "dt": 1,
+    "dx_p": 1,
+    "dy_D": 1,
+    "e_R": 1,
+    "opp": 1,
+    "rnext": 1,
+    "rwhite": 1,
+    "t_A2": 1,
+    "t_D2": 1,
+    "t_R": 1,
+    "tau": 1,
+    "x_A_rel": 1,
+    "x_D_rel": 1
+   }
+  },
+  "5/full": {
+   "depth": 26,
+   "terminal": "win",
+   "n_distinct_features": 26,
+   "repeated_features": {},
+   "sequence": [
+    {
+     "step": 1,
+     "feature": "nW",
+     "value_taken": 2,
+     "rows_before": 1686459,
+     "rows_after": 1384308
+    },
+    {
+     "step": 2,
+     "feature": "nB",
+     "value_taken": 2,
+     "rows_before": 1384308,
+     "rows_after": 1164562
+    },
+    {
+     "step": 3,
+     "feature": "rwhite",
+     "value_taken": 0,
+     "rows_before": 1164562,
+     "rows_after": 570249
+    },
+    {
+     "step": 4,
+     "feature": "tau",
+     "value_taken": 0,
+     "rows_before": 570249,
+     "rows_after": 403026
+    },
+    {
+     "step": 5,
+     "feature": "t_R",
+     "value_taken": 1,
+     "rows_before": 403026,
+     "rows_after": 308140
+    },
+    {
+     "step": 6,
+     "feature": "dt",
+     "value_taken": 0,
+     "rows_before": 308140,
+     "rows_after": 181660
+    },
+    {
+     "step": 7,
+     "feature": "t_A2",
+     "value_taken": 2,
+     "rows_before": 181660,
+     "rows_after": 84127
+    },
+    {
+     "step": 8,
+     "feature": "t_D2",
+     "value_taken": 3,
+     "rows_before": 84127,
+     "rows_after": 36259
+    },
+    {
+     "step": 9,
+     "feature": "rnext",
+     "value_taken": 0,
+     "rows_before": 36259,
+     "rows_after": 28594
+    },
+    {
+     "step": 10,
+     "feature": "A2next",
+     "value_taken": 0,
+     "rows_before": 28594,
+     "rows_after": 15174
+    },
+    {
+     "step": 11,
+     "feature": "Dpnext",
+     "value_taken": 0,
+     "rows_before": 15174,
+     "rows_after": 14502
+    },
+    {
+     "step": 12,
+     "feature": "d_DPR",
+     "value_taken": 2,
+     "rows_before": 14502,
+     "rows_after": 5254
+    },
+    {
+     "step": 13,
+     "feature": "d_DpR",
+     "value_taken": 2,
+     "rows_before": 5254,
+     "rows_after": 3244
+    },
+    {
+     "step": 14,
+     "feature": "d_APD",
+     "value_taken": 2,
+     "rows_before": 3244,
+     "rows_after": 1116
+    },
+    {
+     "step": 15,
+     "feature": "opp",
+     "value_taken": 0,
+     "rows_before": 1116,
+     "rows_after": 917
+    },
+    {
+     "step": 16,
+     "feature": "d_AK",
+     "value_taken": 2,
+     "rows_before": 917,
+     "rows_after": 403
+    },
+    {
+     "step": 17,
+     "feature": "x_A_rel",
+     "value_taken": 0,
+     "rows_before": 403,
+     "rows_after": 188
+    },
+    {
+     "step": 18,
+     "feature": "x_D_rel",
+     "value_taken": -2,
+     "rows_before": 188,
+     "rows_after": 146
+    },
+    {
+     "step": 19,
+     "feature": "d_APR",
+     "value_taken": 2,
+     "rows_before": 146,
+     "rows_after": 136
+    },
+    {
+     "step": 20,
+     "feature": "dy_D",
+     "value_taken": -1,
+     "rows_before": 136,
+     "rows_after": 108
+    },
+    {
+     "step": 21,
+     "feature": "dx_p",
+     "value_taken": -2,
+     "rows_before": 108,
+     "rows_after": 24
+    },
+    {
+     "step": 22,
+     "feature": "e_R",
+     "value_taken": 2,
+     "rows_before": 24,
+     "rows_after": 12
+    },
+    {
+     "step": 23,
+     "feature": "d_KA_A2",
+     "value_taken": 2,
+     "rows_before": 12,
+     "rows_after": 6
+    },
+    {
+     "step": 24,
+     "feature": "d_KD_A2",
+     "value_taken": 2,
+     "rows_before": 6,
+     "rows_after": 3
+    },
+    {
+     "step": 25,
+     "feature": "d_KA_D2",
+     "value_taken": 1,
+     "rows_before": 3,
+     "rows_after": 2
+    },
+    {
+     "step": 26,
+     "feature": "d_KD_D2",
+     "value_taken": 1,
+     "rows_before": 2,
+     "rows_after": 1
+    }
+   ],
+   "feature_counts": {
+    "A2next": 1,
+    "Dpnext": 1,
+    "d_AK": 1,
+    "d_APD": 1,
+    "d_APR": 1,
+    "d_DPR": 1,
+    "d_DpR": 1,
+    "d_KA_A2": 1,
+    "d_KA_D2": 1,
+    "d_KD_A2": 1,
+    "d_KD_D2": 1,
+    "dt": 1,
+    "dx_p": 1,
+    "dy_D": 1,
+    "e_R": 1,
+    "nB": 1,
+    "nW": 1,
+    "opp": 1,
+    "rnext": 1,
+    "rwhite": 1,
+    "t_A2": 1,
+    "t_D2": 1,
+    "t_R": 1,
+    "tau": 1,
+    "x_A_rel": 1,
+    "x_D_rel": 1
+   }
+  }
+ },
+ "comparison": {
+  "duel": {
+   "n4_depth": 15,
+   "n5_depth": 16,
+   "delta": 1,
+   "n4_distinct": 15,
+   "n5_distinct": 16,
+   "repeats_n4": false,
+   "repeats_n5": false,
+   "common_prefix_len": 12,
+   "features_joined_at_n5": [
+    "a_chk",
+    "dy_A"
+   ],
+   "features_left_path_at_n5": [
+    "e_R"
+   ],
+   "n4_sequence": [
+    "tau",
+    "blocked",
+    "dt",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "x_D_rel",
+    "d_APR",
+    "d_ApR",
+    "dy_D",
+    "dx_p",
+    "e_R"
+   ],
+   "n5_sequence": [
+    "tau",
+    "blocked",
+    "dt",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "x_D_rel",
+    "d_APR",
+    "d_ApR",
+    "a_chk",
+    "dy_A",
+    "dy_D",
+    "dx_p"
+   ]
+  },
+  "asym_3p": {
+   "n4_depth": 19,
+   "n5_depth": 22,
+   "delta": 3,
+   "n4_distinct": 19,
+   "n5_distinct": 22,
+   "repeats_n4": false,
+   "repeats_n5": false,
+   "common_prefix_len": 1,
+   "features_joined_at_n5": [
+    "t_A2",
+    "A2next",
+    "d_chk",
+    "dy_A",
+    "dx_p",
+    "e_R",
+    "d_KA_A2",
+    "d_KD_A2",
+    "dx_A2"
+   ],
+   "features_left_path_at_n5": [
+    "nB",
+    "t_D2",
+    "d_DpR",
+    "dy_D",
+    "d_KA_D2",
+    "d_KD_D2"
+   ],
+   "n4_sequence": [
+    "nW",
+    "nB",
+    "rwhite",
+    "tau",
+    "t_R",
+    "dt",
+    "t_D2",
+    "rnext",
+    "Dpnext",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "d_APR",
+    "dy_D",
+    "d_KA_D2",
+    "d_KD_D2"
+   ],
+   "n5_sequence": [
+    "nW",
+    "rwhite",
+    "tau",
+    "t_R",
+    "dt",
+    "t_A2",
+    "rnext",
+    "A2next",
+    "Dpnext",
+    "d_DPR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "d_APR",
+    "d_chk",
+    "dy_A",
+    "dx_p",
+    "e_R",
+    "d_KA_A2",
+    "d_KD_A2",
+    "dx_A2"
+   ]
+  },
+  "four_pawn": {
+   "n4_depth": 21,
+   "n5_depth": 24,
+   "delta": 3,
+   "n4_distinct": 21,
+   "n5_distinct": 24,
+   "repeats_n4": false,
+   "repeats_n5": false,
+   "common_prefix_len": 15,
+   "features_joined_at_n5": [
+    "x_D_rel",
+    "d_APR",
+    "dy_D",
+    "d_KD_A2",
+    "d_KA_D2"
+   ],
+   "features_left_path_at_n5": [
+    "dx_A2",
+    "dx_D2"
+   ],
+   "n4_sequence": [
+    "rwhite",
+    "tau",
+    "t_R",
+    "dt",
+    "t_A2",
+    "t_D2",
+    "rnext",
+    "A2next",
+    "Dpnext",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "dx_p",
+    "e_R",
+    "d_KA_A2",
+    "d_KD_D2",
+    "dx_A2",
+    "dx_D2"
+   ],
+   "n5_sequence": [
+    "rwhite",
+    "tau",
+    "t_R",
+    "dt",
+    "t_A2",
+    "t_D2",
+    "rnext",
+    "A2next",
+    "Dpnext",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "x_D_rel",
+    "d_APR",
+    "dy_D",
+    "dx_p",
+    "e_R",
+    "d_KA_A2",
+    "d_KD_A2",
+    "d_KA_D2",
+    "d_KD_D2"
+   ]
+  },
+  "full_vs_n4_deepest_family": {
+   "n4_reference": "four_pawn (deepest N=4 family; N=4 full space was the 3-MTBDD router, deepest branch depth 21)",
+   "n4_depth": 21,
+   "n5_depth": 26,
+   "delta": 5,
+   "features_joined_at_n5": [
+    "nW",
+    "nB",
+    "x_D_rel",
+    "d_APR",
+    "dy_D",
+    "d_KD_A2",
+    "d_KA_D2"
+   ],
+   "features_left_path_at_n5": [
+    "dx_A2",
+    "dx_D2"
+   ],
+   "n5_sequence": [
+    "nW",
+    "nB",
+    "rwhite",
+    "tau",
+    "t_R",
+    "dt",
+    "t_A2",
+    "t_D2",
+    "rnext",
+    "A2next",
+    "Dpnext",
+    "d_DPR",
+    "d_DpR",
+    "d_APD",
+    "opp",
+    "d_AK",
+    "x_A_rel",
+    "x_D_rel",
+    "d_APR",
+    "dy_D",
+    "dx_p",
+    "e_R",
+    "d_KA_A2",
+    "d_KD_A2",
+    "d_KA_D2",
+    "d_KD_D2"
+   ]
+  }
+ },
+ "chain_analysis": {
+  "4/duel": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "4/asym_3p": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "4/four_pawn": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "5/duel": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "5/asym_3p": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "5/four_pawn": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  },
+  "5/full": {
+   "any_feature_repeated": false,
+   "repeats": {},
+   "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+  }
+ }
+}

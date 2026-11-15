@@ -1,0 +1,27 @@
+{
+ "n": 3,
+ "class": "kn",
+ "mat": [
+  0,
+  0,
+  1,
+  1
+ ],
+ "basis": "v2",
+ "class_states": 2112,
+ "feature_count": 28,
+ "distinct_feature_vectors": 2112,
+ "max_bucket": 1,
+ "conflict_buckets": 0,
+ "empirical_time_s": 0.0,
+ "z3_full": {
+  "result": "unsat",
+  "time_s": 1.66,
+  "array_states": 2112
+ },
+ "verdict": "PROVED",
+ "verdict_meaning": "no legal class states with identical feature vectors and different VAL - the basis is value-sufficient on this class (Z3 unsat over the full class)",
+ "z3_time_s": 1.6551401615142822,
+ "z3_version": "5.4.1",
+ "total_time_s": 5.63
+}

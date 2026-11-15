@@ -1,0 +1,41 @@
+config: N=3  out_dir=./out_n3  skip_invariants=True
+NK=32 king pairs, NC=7 configs/side, NPP=25 valid pawn-config pairs
+State slots NS = NK*NPP*2 = 1600
+placements enumerated: 628   (0.0s)
+legal states: 1032   directed edges: 1332
+terminal states: mates=52 stalemates=74 immediate-promotion wins=396
+retrograde fixpoint reached (0.0s); unresolved -> cycle-draws = 216
+DTC iteration converged in 4 sweeps; max DTC = 4 plies (over decided states)
+self-tests: mirror symmetry OK; phi/mu/chi anti-symmetry OK; K-vs-K all draws OK
+
+== VALUE DISTRIBUTION ==  White wins 371 (35.95%) | draws 290 (28.10%) | Black wins 371 (35.95%)
+
+== VALUE BY MATERIAL CLASS (white pawn count x black pawn count) ==
+   WxB      n     White+     draw    Black+   draw%
+   2x1        93        59       12        22   12.9%
+   2x0       121       109       12         0    9.9%
+   1x2        93        22       12        59   12.9%
+   1x1       236        88       60        88   25.4%
+   1x0       152        93       59         0   38.8%
+   0x2       121         0       12       109    9.9%
+   0x1       152         0       59        93   38.8%
+   0x0        64         0       64         0  100.0%
+
+== TEMPO STRUCTURE (placements with both tempi legal: 430) ==
+  mutual zugzwang placements (mover LOSES with either tempo): 0
+  first-player-win placements (mover WINS with either tempo):  76
+  tempo-sensitive placements (outcome-for-White flips with tempo): 182
+  tempo-sensitive breakdown (outcome W-to-move, outcome B-to-move): [((1, 2), 76), ((1, 3), 49), ((3, 2), 49), ((3, 1), 4), ((2, 3), 4)]
+
+== LAB: K+P vs K (n=152)  White+ 93  draw 59  Black+ 0
+  with White to move: White wins 76.47%  (n=68)
+
+== DTC (plies to conversion, optimal play) ==  White wins: max 3, mean 1.18;  deepest state:
+     a b c
+   3 . k .  White to move
+   2 . p .  White to move
+   1 K . .  White to move
+     value: Black wins  (DTC 4)  phi=0 mu=0 chi=0 block=False
+
+arrays saved -> ./out_n3/phase1_values.npz
+total runtime 0.0s  |  python 3.12.16 numpy 2.1.3

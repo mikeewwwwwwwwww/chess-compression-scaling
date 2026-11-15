@@ -1,0 +1,35 @@
+config: N=4 class=both mat(max wp,bp,nw,nb)=(1, 1, 1, 1) out=./out_class_both_n4
+enumerating closure placements ...
+placements enumerated: 2,344,644 legal states (15.0s)
+legal states: 2,344,644   directed edges: 8,208,460
+terminals: mates=5,608 stalemates=2,836 immediate-promotion wins=574,672
+retrograde fixpoint reached (24.6s); cycle-draws = 804,536
+DTC converged in 34 sweeps; max DTC = 34 plies
+self-tests:
+  S1 K vs K all draws: OK (312 states)
+  S2 K+N vs K all draws: OK (7,936 states)
+  S3 colour-swap mirror VAL-preserving: OK (2,344,644 states)
+  S4 file reflection H VAL-preserving: OK (2,344,644 states)
+  S5 K2P phase-1 crosscheck (N=4): 16,920 knight-free states match out_n4/phase1_values.npz exactly: OK
+
+class both: 1,358,808 of 2,344,644 closure states (58.0%)
+
+== VALUE BY MATERIAL (wp,bp,nw,nb) ==  (closure-wide)
+  mat(True, True, True, True)  n=1,358,808  mover-wins  737,796 ( 54.3%)  draws  407,240 ( 30.0%)  mover-losses  213,772 ( 15.7%)
+  mat(True, True, True, False)  n=  136,068  mover-wins   81,778 ( 60.1%)  draws   24,130 ( 17.7%)  mover-losses   30,160 ( 22.2%)
+  mat(True, True, False, True)  n=  136,068  mover-wins   81,778 ( 60.1%)  draws   24,130 ( 17.7%)  mover-losses   30,160 ( 22.2%)
+  mat(True, True, False, False)  n=   12,384  mover-wins    7,856 ( 63.4%)  draws    2,144 ( 17.3%)  mover-losses    2,384 ( 19.3%)
+  mat(True, False, True, True)  n=  271,176  mover-wins   97,510 ( 36.0%)  draws  126,976 ( 46.8%)  mover-losses   46,690 ( 17.2%)
+  mat(True, False, True, False)  n=   25,178  mover-wins   10,354 ( 41.1%)  draws    4,636 ( 18.4%)  mover-losses   10,188 ( 40.5%)
+  mat(True, False, False, True)  n=   24,876  mover-wins    7,444 ( 29.9%)  draws   15,278 ( 61.4%)  mover-losses    2,154 (  8.7%)
+  mat(True, False, False, False)  n=    2,112  mover-wins      848 ( 40.2%)  draws      690 ( 32.7%)  mover-losses      574 ( 27.2%)
+  mat(False, True, True, True)  n=  271,176  mover-wins   97,510 ( 36.0%)  draws  126,976 ( 46.8%)  mover-losses   46,690 ( 17.2%)
+  mat(False, True, True, False)  n=   24,876  mover-wins    7,444 ( 29.9%)  draws   15,278 ( 61.4%)  mover-losses    2,154 (  8.7%)
+  mat(False, True, False, True)  n=   25,178  mover-wins   10,354 ( 41.1%)  draws    4,636 ( 18.4%)  mover-losses   10,188 ( 40.5%)
+  mat(False, True, False, False)  n=    2,112  mover-wins      848 ( 40.2%)  draws      690 ( 32.7%)  mover-losses      574 ( 27.2%)
+  mat(False, False, True, True)  n=   46,384  mover-wins       48 (  0.1%)  draws   46,320 ( 99.9%)  mover-losses       16 (  0.0%)
+  mat(False, False, True, False)  n=    3,968  mover-wins        0 (  0.0%)  draws    3,968 (100.0%)  mover-losses        0 (  0.0%)
+  mat(False, False, False, True)  n=    3,968  mover-wins        0 (  0.0%)  draws    3,968 (100.0%)  mover-losses        0 (  0.0%)
+  mat(False, False, False, False)  n=      312  mover-wins        0 (  0.0%)  draws      312 (100.0%)  mover-losses        0 (  0.0%)
+
+arrays saved -> ./out_class_both_n4/class_values.npz

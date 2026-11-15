@@ -1,0 +1,39 @@
+{
+ "class": "both",
+ "n": 4,
+ "mat": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "states": 1358808,
+ "canonical_orbits": 339702,
+ "semantic_features": 32,
+ "semantic_distinct_rows": 296861,
+ "semantic_conflicting_groups": 7388,
+ "tail_used": true,
+ "full_rows": 339702,
+ "mtbdd": {
+  "nodes": 73013,
+  "paths": 171253,
+  "max_depth": 28
+ },
+ "win_loss_bdds": null,
+ "ratio_states_per_node": 18.61,
+ "class_max_dtc": 34,
+ "verification": {
+  "status": "PASS_INPROCESS",
+  "verified_rows": 339702,
+  "value_mismatches": 0
+ },
+ "emission": {
+  "emitted": false,
+  "helpers": 7888,
+  "tree_lines": 253860,
+  "over_budget_by": 53860
+ },
+ "peak_rss_mib": 813.9,
+ "total_time_s": 29.7,
+ "z3_reference": "./out_class_both_n4/z3_injectivity.json"
+}

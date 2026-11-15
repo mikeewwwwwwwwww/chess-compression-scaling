@@ -1,0 +1,23 @@
+config: N=4 class=kn mat(max wp,bp,nw,nb)=(0, 0, 1, 1) out=./out_class_kn_n4
+enumerating closure placements ...
+placements enumerated: 54,632 legal states (0.3s)
+legal states: 54,632   directed edges: 273,760
+terminals: mates=16 stalemates=80 immediate-promotion wins=0
+retrograde fixpoint reached (0.3s); cycle-draws = 54,488
+DTC converged in 2 sweeps; max DTC = 1 plies
+self-tests:
+  S1 K vs K all draws: OK (312 states)
+  S2 K+N vs K all draws: OK (7,936 states)
+  S3 colour-swap mirror VAL-preserving: OK (54,632 states)
+  S4 file reflection H VAL-preserving: OK (54,632 states)
+  S5 K2P phase-1 crosscheck (N=4): 312 knight-free states match out_n4/phase1_values.npz exactly: OK
+
+class kn: 46,384 of 54,632 closure states (84.9%)
+
+== VALUE BY MATERIAL (wp,bp,nw,nb) ==  (closure-wide)
+  mat(False, False, True, True)  n=   46,384  mover-wins       48 (  0.1%)  draws   46,320 ( 99.9%)  mover-losses       16 (  0.0%)
+  mat(False, False, True, False)  n=    3,968  mover-wins        0 (  0.0%)  draws    3,968 (100.0%)  mover-losses        0 (  0.0%)
+  mat(False, False, False, True)  n=    3,968  mover-wins        0 (  0.0%)  draws    3,968 (100.0%)  mover-losses        0 (  0.0%)
+  mat(False, False, False, False)  n=      312  mover-wins        0 (  0.0%)  draws      312 (100.0%)  mover-losses        0 (  0.0%)
+
+arrays saved -> ./out_class_kn_n4/class_values.npz

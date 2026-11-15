@@ -1,0 +1,23 @@
+config: N=5 class=kpn mat(max wp,bp,nw,nb)=(1, 0, 1, 0) out=./out_class_kpn_n5
+enumerating closure placements ...
+placements enumerated: 282,240 legal states (3.4s)
+legal states: 282,240   directed edges: 1,345,958
+terminals: mates=40 stalemates=951 immediate-promotion wins=34,340
+retrograde fixpoint reached (5.4s); cycle-draws = 59,928
+DTC converged in 26 sweeps; max DTC = 26 plies
+self-tests:
+  S1 K vs K all draws: OK (912 states)
+  S2 K+N vs K all draws: OK (19,376 states)
+  S3 colour-swap mirror: SKIPPED (closure is colour-asymmetric; the V' image lives in the mirrored class)
+  S4 file reflection H VAL-preserving: OK (282,240 states)
+  S5 K2P phase-1 crosscheck (N=5): 13,136 knight-free states match out_n5/phase1_values.npz exactly: OK
+
+class kpn: 249,728 of 282,240 closure states (88.5%)
+
+== VALUE BY MATERIAL (wp,bp,nw,nb) ==  (closure-wide)
+  mat(True, False, True, False)  n=  249,728  mover-wins  107,776 ( 43.2%)  draws   36,637 ( 14.7%)  mover-losses  105,315 ( 42.2%)
+  mat(True, False, False, False)  n=   12,224  mover-wins    4,835 ( 39.6%)  draws    3,954 ( 32.3%)  mover-losses    3,435 ( 28.1%)
+  mat(False, False, True, False)  n=   19,376  mover-wins        0 (  0.0%)  draws   19,376 (100.0%)  mover-losses        0 (  0.0%)
+  mat(False, False, False, False)  n=      912  mover-wins        0 (  0.0%)  draws      912 (100.0%)  mover-losses        0 (  0.0%)
+
+arrays saved -> ./out_class_kpn_n5/class_values.npz

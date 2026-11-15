@@ -1,0 +1,32 @@
+{
+ "n": 5,
+ "class": "kn",
+ "mat": [
+  0,
+  0,
+  1,
+  1
+ ],
+ "basis": "v2",
+ "class_states": 391072,
+ "feature_count": 28,
+ "distinct_feature_vectors": 390496,
+ "max_bucket": 2,
+ "conflict_buckets": 0,
+ "empirical_time_s": 0.39,
+ "z3_full": {
+  "result": "SKIPPED",
+  "reason": "class has 391,072 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+ },
+ "z3_subspace": {
+  "result": "unsat",
+  "time_s": 18.65,
+  "array_states": 18568,
+  "wk_lt": 1,
+  "fraction": 0.0475
+ },
+ "verdict": "PROVED_ON_SUBSPACE",
+ "verdict_meaning": "Z3 proved value-sufficiency on the bounded subspace (wk < 1, 4.7% of the class); full-class axiomatisation skipped (class size); empirical layer clean on the full class (391,072 states, 390,496 feature vectors)",
+ "z3_version": "5.4.1",
+ "total_time_s": 45.1
+}

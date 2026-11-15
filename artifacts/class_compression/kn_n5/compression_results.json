@@ -1,0 +1,94 @@
+{
+ "class": "kn",
+ "n": 5,
+ "mat": [
+  0,
+  0,
+  1,
+  1
+ ],
+ "states": 391072,
+ "canonical_orbits": 97804,
+ "semantic_features": 18,
+ "semantic_distinct_rows": 50446,
+ "semantic_conflicting_groups": 6,
+ "tail_used": true,
+ "full_rows": 97804,
+ "mtbdd": {
+  "nodes": 139,
+  "paths": 243,
+  "max_depth": 16
+ },
+ "win_loss_bdds": {
+  "win": {
+   "nodes": 107,
+   "paths": 192,
+   "depth": 16
+  },
+  "loss": {
+   "nodes": 39,
+   "paths": 63,
+   "depth": 13
+  },
+  "total_nodes": 285
+ },
+ "ratio_states_per_node": 2813.47,
+ "class_max_dtc": 1,
+ "verification": {
+  "verified_states": 391072,
+  "value_mismatches": 0,
+  "us_per_state": 10.68,
+  "status": "PASS",
+  "wall_s": 4.4
+ },
+ "emission": {
+  "emitted": true,
+  "helpers": 4,
+  "tree_lines": 624,
+  "main_lines": 666,
+  "total_lines": 696,
+  "surviving_features": [
+   "tau",
+   "d_AK",
+   "opp",
+   "e_w",
+   "e_b",
+   "k_dist",
+   "katt_w",
+   "katt_b",
+   "kchk_w",
+   "kchk_b",
+   "k_w_own",
+   "k_b_own",
+   "k_w_enemy",
+   "k_b_enemy",
+   "k_atk_w",
+   "k_atk_b",
+   "cwk",
+   "cbk"
+  ],
+  "used_indices": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ]
+ },
+ "peak_rss_mib": 223.7,
+ "total_time_s": 11.3,
+ "z3_reference": "./out_class_kn_n5/z3_injectivity.json"
+}

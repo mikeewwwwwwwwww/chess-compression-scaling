@@ -1,0 +1,44 @@
+config: N=5  out_dir=./out_n5  skip_invariants=True
+NK=456 king pairs, NC=121 configs/side, NPP=11371 valid pawn-config pairs
+State slots NS = NK*NPP*2 = 10370352
+placements enumerated: 3820268   (53.4s)
+legal states: 6744724   directed edges: 32551012
+terminal states: mates=4256 stalemates=4396 immediate-promotion wins=2765540
+retrograde fixpoint reached (68.9s); unresolved -> cycle-draws = 331330
+DTC iteration converged in 38 sweeps; max DTC = 38 plies (over decided states)
+self-tests: mirror symmetry OK; phi/mu/chi anti-symmetry OK; K-vs-K all draws OK
+
+== VALUE DISTRIBUTION ==  White wins 3204499 (47.51%) | draws 335726 (4.98%) | Black wins 3204499 (47.51%)
+
+== VALUE BY MATERIAL CLASS (white pawn count x black pawn count) ==
+   WxB      n     White+     draw    Black+   draw%
+   2x2   4657278   2236152   184974   2236152    4.0%
+   2x1    878610    592089    52024    234497    5.9%
+   2x0     76293     71968     4325         0    5.7%
+   1x2    878610    234497    52024    592089    5.9%
+   1x1    152280     61523    29234     61523   19.2%
+   1x0     12224      8270     3954         0   32.3%
+   0x2     76293         0     4325     71968    5.7%
+   0x1     12224         0     3954      8270   32.3%
+   0x0       912         0      912         0  100.0%
+
+== TEMPO STRUCTURE (placements with both tempi legal: 2985749) ==
+  mutual zugzwang placements (mover LOSES with either tempo): 168
+  first-player-win placements (mover WINS with either tempo):  1149443
+  tempo-sensitive placements (outcome-for-White flips with tempo): 1301273
+  tempo-sensitive breakdown (outcome W-to-move, outcome B-to-move): [((1, 2), 1149443), ((3, 2), 75259), ((1, 3), 75259), ((2, 3), 572), ((3, 1), 572), ((2, 1), 168)]
+
+== LAB: K+P vs K (n=12224)  White+ 8270  draw 3954  Black+ 0
+  with White to move: White wins 81.95%  (n=5900)
+
+== DTC (plies to conversion, optimal play) ==  White wins: max 37, mean 2.46;  deepest state:
+     a b c d e
+   5 . . . . .  Black to move
+   4 . . . . p  Black to move
+   3 k p . . .  Black to move
+   2 . P P . .  Black to move
+   1 . K . . .  Black to move
+     value: Black wins  (DTC 38)  phi=0 mu=0 chi=0 block=False
+
+arrays saved -> ./out_n5/phase1_values.npz
+total runtime 110.2s  |  python 3.12.16 numpy 2.1.3

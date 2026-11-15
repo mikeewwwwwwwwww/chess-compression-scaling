@@ -1,0 +1,29 @@
+{
+ "n": 4,
+ "class": "both",
+ "mat": [
+  1,
+  1,
+  1,
+  1
+ ],
+ "basis": "v2",
+ "class_states": 1358808,
+ "feature_count": 50,
+ "distinct_feature_vectors": 1358808,
+ "max_bucket": 1,
+ "conflict_buckets": 0,
+ "empirical_time_s": 1.82,
+ "z3_full": {
+  "result": "SKIPPED",
+  "reason": "class has 1,358,808 states > --max-proof-states 60,000; the per-state VAL array axiomatisation is not attempted at this size"
+ },
+ "z3_subspace": {
+  "result": "SKIPPED",
+  "reason": "the 10% subspace has 199,738 states > --max-proof-states 60,000"
+ },
+ "verdict": "EMPIRICAL_ONLY",
+ "verdict_meaning": "no Z3 proof attempted within the array-size cap; value-sufficiency rests on the empirical layer: 0 conflicts over the full class (1,358,808 states, 1,358,808 feature vectors)",
+ "z3_version": "5.4.1",
+ "total_time_s": 27.92
+}

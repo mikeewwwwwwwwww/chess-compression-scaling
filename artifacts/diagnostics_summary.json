@@ -1,0 +1,1543 @@
+{
+ "meta": {
+  "track": "E (diagnostics)",
+  "date": "2026-11-15",
+  "artifact_version": "v1 baseline throughout (compression_summary.json contains only the v1 generalized builds; no tuned Track A-D artifacts were present, so no tuned variant was used anywhere)",
+  "provenance_note": "The sandbox outage that interrupted the N=5 full-space build also destroyed the diagnostics/ directory: e1_core_check.json, e2_e4_contact_mzz.json, e5_timing.json, trace_n4_*/ and the pre-outage diagnostics_summary.json are NOT recoverable. Per the resume instruction E1/E2/E4/E5 and the N=4 E3 traces were NOT re-run. Two reconstructions were unavoidable and are marked as such: (a) the N=4 deepest-path traces were regenerated (~6 s total; they are required inputs for the N=4-vs-N=5 comparison and reproduce the v1 stats exactly: nodes/paths/depth byte-match compression_summary.json); (b) E1's architectural correction and E4's N=4 half are re-grounded below in durable repo artifacts (phase7b_results.json, README), not re-run. E2 and the N=5 half of E4 have no surviving artifact and were not recomputed.",
+  "durable_prior_results_used": {
+   "compression_summary.json": "v1 runs n3/n4/n5 (nodes, paths, depths, feature survival q4, orbit stats q5)",
+   "scaling_summary.json": "solver runtimes and RSS for N=3/4/5",
+   "k2p-algebraic-closure/download/phase7b_results.json": "residual: 0, psi_v7b_acc: 1.0, mutual_zugzwang_exact: 16",
+   "k2p-algebraic-closure/README.md": "93.84% / 9,534-state phase-6c snapshot"
+  }
+ },
+ "e3_critical_path_traces": {
+  "method": "--trace added to scripts_general/compress_family_general.py (trace mode skips emission/verification and never touches compression_summary.json). After the MTBDD build, walk the deepest root-to-leaf path: at each node follow the child with the deepest subtree, tie-break smallest branch value. Emit (step, feature_name, value_taken, rows_before, rows_after). Feature indices strictly increase along any path (children are built at bi+1), so each feature can appear AT MOST ONCE per path - this is a structural property of the ordered MTBDD.",
+  "traces": {
+   "n4_duel": {
+    "depth": 15,
+    "terminal": "draw",
+    "n_distinct_features": 15,
+    "any_feature_repeated": false,
+    "sequence": [
+     "tau=0",
+     "blocked=0",
+     "dt=0",
+     "d_DPR=2",
+     "d_DpR=2",
+     "d_APD=3",
+     "opp=0",
+     "d_AK=2",
+     "x_A_rel=0",
+     "x_D_rel=-2",
+     "d_APR=0",
+     "d_ApR=1",
+     "dy_D=0",
+     "dx_p=-2",
+     "e_R=0"
+    ],
+    "rows_narrowing": [
+     [
+      4152,
+      2926
+     ],
+     [
+      2926,
+      2491
+     ],
+     [
+      2491,
+      1345
+     ],
+     [
+      1345,
+      419
+     ],
+     [
+      419,
+      259
+     ],
+     [
+      259,
+      103
+     ],
+     [
+      103,
+      75
+     ],
+     [
+      75,
+      43
+     ],
+     [
+      43,
+      28
+     ],
+     [
+      28,
+      22
+     ],
+     [
+      22,
+      20
+     ],
+     [
+      20,
+      10
+     ],
+     [
+      10,
+      6
+     ],
+     [
+      6,
+      2
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "blocked": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_ApR": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "dt": 1,
+     "dx_p": 1,
+     "dy_D": 1,
+     "e_R": 1,
+     "opp": 1,
+     "tau": 1,
+     "x_A_rel": 1,
+     "x_D_rel": 1
+    }
+   },
+   "n4_asym_3p": {
+    "depth": 19,
+    "terminal": "loss",
+    "n_distinct_features": 19,
+    "any_feature_repeated": false,
+    "sequence": [
+     "nW=2",
+     "nB=1",
+     "rwhite=0",
+     "tau=0",
+     "t_R=1",
+     "dt=0",
+     "t_D2=2",
+     "rnext=0",
+     "Dpnext=0",
+     "d_DPR=3",
+     "d_DpR=3",
+     "d_APD=2",
+     "opp=0",
+     "d_AK=2",
+     "x_A_rel=-1",
+     "d_APR=2",
+     "dy_D=-1",
+     "d_KA_D2=1",
+     "d_KD_D2=1"
+    ],
+    "rows_narrowing": [
+     [
+      18585,
+      7927
+     ],
+     [
+      7927,
+      6564
+     ],
+     [
+      6564,
+      2344
+     ],
+     [
+      2344,
+      2111
+     ],
+     [
+      2111,
+      1572
+     ],
+     [
+      1572,
+      1330
+     ],
+     [
+      1330,
+      904
+     ],
+     [
+      904,
+      592
+     ],
+     [
+      592,
+      562
+     ],
+     [
+      562,
+      179
+     ],
+     [
+      179,
+      143
+     ],
+     [
+      143,
+      38
+     ],
+     [
+      38,
+      31
+     ],
+     [
+      31,
+      22
+     ],
+     [
+      22,
+      19
+     ],
+     [
+      19,
+      5
+     ],
+     [
+      5,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "Dpnext": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "d_KA_D2": 1,
+     "d_KD_D2": 1,
+     "dt": 1,
+     "dy_D": 1,
+     "nB": 1,
+     "nW": 1,
+     "opp": 1,
+     "rnext": 1,
+     "rwhite": 1,
+     "t_D2": 1,
+     "t_R": 1,
+     "tau": 1,
+     "x_A_rel": 1
+    }
+   },
+   "n4_four_pawn": {
+    "depth": 21,
+    "terminal": "draw",
+    "n_distinct_features": 21,
+    "any_feature_repeated": false,
+    "sequence": [
+     "rwhite=0",
+     "tau=0",
+     "t_R=1",
+     "dt=0",
+     "t_A2=2",
+     "t_D2=2",
+     "rnext=0",
+     "A2next=1",
+     "Dpnext=0",
+     "d_DPR=2",
+     "d_DpR=2",
+     "d_APD=1",
+     "opp=0",
+     "d_AK=3",
+     "x_A_rel=-1",
+     "dx_p=-2",
+     "e_R=1",
+     "d_KA_A2=1",
+     "d_KD_D2=1",
+     "dx_A2=0",
+     "dx_D2=-2"
+    ],
+    "rows_narrowing": [
+     [
+      15907,
+      7858
+     ],
+     [
+      7858,
+      6572
+     ],
+     [
+      6572,
+      5814
+     ],
+     [
+      5814,
+      4627
+     ],
+     [
+      4627,
+      3178
+     ],
+     [
+      3178,
+      2563
+     ],
+     [
+      2563,
+      1683
+     ],
+     [
+      1683,
+      932
+     ],
+     [
+      932,
+      835
+     ],
+     [
+      835,
+      409
+     ],
+     [
+      409,
+      260
+     ],
+     [
+      260,
+      79
+     ],
+     [
+      79,
+      67
+     ],
+     [
+      67,
+      40
+     ],
+     [
+      40,
+      11
+     ],
+     [
+      11,
+      6
+     ],
+     [
+      6,
+      5
+     ],
+     [
+      5,
+      4
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "A2next": 1,
+     "Dpnext": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "d_KA_A2": 1,
+     "d_KD_D2": 1,
+     "dt": 1,
+     "dx_A2": 1,
+     "dx_D2": 1,
+     "dx_p": 1,
+     "e_R": 1,
+     "opp": 1,
+     "rnext": 1,
+     "rwhite": 1,
+     "t_A2": 1,
+     "t_D2": 1,
+     "t_R": 1,
+     "tau": 1,
+     "x_A_rel": 1
+    }
+   },
+   "n5_duel": {
+    "depth": 16,
+    "terminal": "draw",
+    "n_distinct_features": 16,
+    "any_feature_repeated": false,
+    "sequence": [
+     "tau=0",
+     "blocked=0",
+     "dt=0",
+     "d_DPR=2",
+     "d_DpR=2",
+     "d_APD=1",
+     "opp=0",
+     "d_AK=3",
+     "x_A_rel=-1",
+     "x_D_rel=2",
+     "d_APR=3",
+     "d_ApR=1",
+     "a_chk=0",
+     "dy_A=0",
+     "dy_D=1",
+     "dx_p=-2"
+    ],
+    "rows_narrowing": [
+     [
+      44220,
+      28287
+     ],
+     [
+      28287,
+      26488
+     ],
+     [
+      26488,
+      12665
+     ],
+     [
+      12665,
+      2892
+     ],
+     [
+      2892,
+      1681
+     ],
+     [
+      1681,
+      331
+     ],
+     [
+      331,
+      298
+     ],
+     [
+      298,
+      140
+     ],
+     [
+      140,
+      45
+     ],
+     [
+      45,
+      29
+     ],
+     [
+      29,
+      15
+     ],
+     [
+      15,
+      11
+     ],
+     [
+      11,
+      10
+     ],
+     [
+      10,
+      7
+     ],
+     [
+      7,
+      5
+     ],
+     [
+      5,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "a_chk": 1,
+     "blocked": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_ApR": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "dt": 1,
+     "dx_p": 1,
+     "dy_A": 1,
+     "dy_D": 1,
+     "opp": 1,
+     "tau": 1,
+     "x_A_rel": 1,
+     "x_D_rel": 1
+    }
+   },
+   "n5_asym_3p": {
+    "depth": 22,
+    "terminal": "win",
+    "n_distinct_features": 22,
+    "any_feature_repeated": false,
+    "sequence": [
+     "nW=1",
+     "rwhite=0",
+     "tau=1",
+     "t_R=1",
+     "dt=-2",
+     "t_A2=3",
+     "rnext=0",
+     "A2next=0",
+     "Dpnext=0",
+     "d_DPR=1",
+     "d_APD=3",
+     "opp=0",
+     "d_AK=3",
+     "x_A_rel=2",
+     "d_APR=2",
+     "d_chk=1",
+     "dy_A=0",
+     "dx_p=-1",
+     "e_R=1",
+     "d_KA_A2=2",
+     "d_KD_A2=3",
+     "dx_A2=0"
+    ],
+    "rows_narrowing": [
+     [
+      477677,
+      237465
+     ],
+     [
+      237465,
+      153223
+     ],
+     [
+      153223,
+      61758
+     ],
+     [
+      61758,
+      45648
+     ],
+     [
+      45648,
+      20622
+     ],
+     [
+      20622,
+      8961
+     ],
+     [
+      8961,
+      7381
+     ],
+     [
+      7381,
+      6824
+     ],
+     [
+      6824,
+      6264
+     ],
+     [
+      6264,
+      1432
+     ],
+     [
+      1432,
+      352
+     ],
+     [
+      352,
+      288
+     ],
+     [
+      288,
+      129
+     ],
+     [
+      129,
+      56
+     ],
+     [
+      56,
+      48
+     ],
+     [
+      48,
+      33
+     ],
+     [
+      33,
+      25
+     ],
+     [
+      25,
+      10
+     ],
+     [
+      10,
+      5
+     ],
+     [
+      5,
+      4
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      3,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "A2next": 1,
+     "Dpnext": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_DPR": 1,
+     "d_KA_A2": 1,
+     "d_KD_A2": 1,
+     "d_chk": 1,
+     "dt": 1,
+     "dx_A2": 1,
+     "dx_p": 1,
+     "dy_A": 1,
+     "e_R": 1,
+     "nW": 1,
+     "opp": 1,
+     "rnext": 1,
+     "rwhite": 1,
+     "t_A2": 1,
+     "t_R": 1,
+     "tau": 1,
+     "x_A_rel": 1
+    }
+   },
+   "n5_four_pawn": {
+    "depth": 24,
+    "terminal": "win",
+    "n_distinct_features": 24,
+    "any_feature_repeated": false,
+    "sequence": [
+     "rwhite=0",
+     "tau=0",
+     "t_R=1",
+     "dt=0",
+     "t_A2=2",
+     "t_D2=3",
+     "rnext=0",
+     "A2next=0",
+     "Dpnext=0",
+     "d_DPR=2",
+     "d_DpR=2",
+     "d_APD=2",
+     "opp=0",
+     "d_AK=2",
+     "x_A_rel=0",
+     "x_D_rel=-2",
+     "d_APR=2",
+     "dy_D=-1",
+     "dx_p=-2",
+     "e_R=2",
+     "d_KA_A2=2",
+     "d_KD_A2=2",
+     "d_KA_D2=1",
+     "d_KD_D2=1"
+    ],
+    "rows_narrowing": [
+     [
+      1164562,
+      570249
+     ],
+     [
+      570249,
+      403026
+     ],
+     [
+      403026,
+      308140
+     ],
+     [
+      308140,
+      181660
+     ],
+     [
+      181660,
+      84127
+     ],
+     [
+      84127,
+      36259
+     ],
+     [
+      36259,
+      28594
+     ],
+     [
+      28594,
+      15174
+     ],
+     [
+      15174,
+      14502
+     ],
+     [
+      14502,
+      5254
+     ],
+     [
+      5254,
+      3244
+     ],
+     [
+      3244,
+      1116
+     ],
+     [
+      1116,
+      917
+     ],
+     [
+      917,
+      403
+     ],
+     [
+      403,
+      188
+     ],
+     [
+      188,
+      146
+     ],
+     [
+      146,
+      136
+     ],
+     [
+      136,
+      108
+     ],
+     [
+      108,
+      24
+     ],
+     [
+      24,
+      12
+     ],
+     [
+      12,
+      6
+     ],
+     [
+      6,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "A2next": 1,
+     "Dpnext": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "d_KA_A2": 1,
+     "d_KA_D2": 1,
+     "d_KD_A2": 1,
+     "d_KD_D2": 1,
+     "dt": 1,
+     "dx_p": 1,
+     "dy_D": 1,
+     "e_R": 1,
+     "opp": 1,
+     "rnext": 1,
+     "rwhite": 1,
+     "t_A2": 1,
+     "t_D2": 1,
+     "t_R": 1,
+     "tau": 1,
+     "x_A_rel": 1,
+     "x_D_rel": 1
+    }
+   },
+   "n5_full": {
+    "depth": 26,
+    "terminal": "win",
+    "n_distinct_features": 26,
+    "any_feature_repeated": false,
+    "sequence": [
+     "nW=2",
+     "nB=2",
+     "rwhite=0",
+     "tau=0",
+     "t_R=1",
+     "dt=0",
+     "t_A2=2",
+     "t_D2=3",
+     "rnext=0",
+     "A2next=0",
+     "Dpnext=0",
+     "d_DPR=2",
+     "d_DpR=2",
+     "d_APD=2",
+     "opp=0",
+     "d_AK=2",
+     "x_A_rel=0",
+     "x_D_rel=-2",
+     "d_APR=2",
+     "dy_D=-1",
+     "dx_p=-2",
+     "e_R=2",
+     "d_KA_A2=2",
+     "d_KD_A2=2",
+     "d_KA_D2=1",
+     "d_KD_D2=1"
+    ],
+    "rows_narrowing": [
+     [
+      1686459,
+      1384308
+     ],
+     [
+      1384308,
+      1164562
+     ],
+     [
+      1164562,
+      570249
+     ],
+     [
+      570249,
+      403026
+     ],
+     [
+      403026,
+      308140
+     ],
+     [
+      308140,
+      181660
+     ],
+     [
+      181660,
+      84127
+     ],
+     [
+      84127,
+      36259
+     ],
+     [
+      36259,
+      28594
+     ],
+     [
+      28594,
+      15174
+     ],
+     [
+      15174,
+      14502
+     ],
+     [
+      14502,
+      5254
+     ],
+     [
+      5254,
+      3244
+     ],
+     [
+      3244,
+      1116
+     ],
+     [
+      1116,
+      917
+     ],
+     [
+      917,
+      403
+     ],
+     [
+      403,
+      188
+     ],
+     [
+      188,
+      146
+     ],
+     [
+      146,
+      136
+     ],
+     [
+      136,
+      108
+     ],
+     [
+      108,
+      24
+     ],
+     [
+      24,
+      12
+     ],
+     [
+      12,
+      6
+     ],
+     [
+      6,
+      3
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "feature_counts": {
+     "A2next": 1,
+     "Dpnext": 1,
+     "d_AK": 1,
+     "d_APD": 1,
+     "d_APR": 1,
+     "d_DPR": 1,
+     "d_DpR": 1,
+     "d_KA_A2": 1,
+     "d_KA_D2": 1,
+     "d_KD_A2": 1,
+     "d_KD_D2": 1,
+     "dt": 1,
+     "dx_p": 1,
+     "dy_D": 1,
+     "e_R": 1,
+     "nB": 1,
+     "nW": 1,
+     "opp": 1,
+     "rnext": 1,
+     "rwhite": 1,
+     "t_A2": 1,
+     "t_D2": 1,
+     "t_R": 1,
+     "tau": 1,
+     "x_A_rel": 1,
+     "x_D_rel": 1
+    }
+   }
+  },
+  "trace_files": {
+   "n4": [
+    "trace_n4_duel/trace_duel_full-family.json",
+    "trace_n4_asym_3p/trace_asym_3p_full-family.json",
+    "trace_n4_four_pawn/trace_four_pawn_full-family.json"
+   ],
+   "n5": [
+    "trace_n5_duel/trace_duel_full-family.json",
+    "trace_n5_asym_3p/trace_asym_3p_full-family.json",
+    "trace_n5_four_pawn/trace_four_pawn_full-family.json",
+    "trace_n5_full/trace_full_full.json"
+   ]
+  },
+  "n4_traces_regenerated": true,
+  "n4_regeneration_note": "reproduces v1 mtbdd stats exactly (duel 652 nodes/depth 15, asym 2050/19, 4p 2183/21)",
+  "comparison": {
+   "duel": {
+    "n4_depth": 15,
+    "n5_depth": 16,
+    "delta": 1,
+    "n4_distinct": 15,
+    "n5_distinct": 16,
+    "repeats_n4": false,
+    "repeats_n5": false,
+    "common_prefix_len": 12,
+    "features_joined_at_n5": [
+     "a_chk",
+     "dy_A"
+    ],
+    "features_left_path_at_n5": [
+     "e_R"
+    ],
+    "n4_sequence": [
+     "tau",
+     "blocked",
+     "dt",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "x_D_rel",
+     "d_APR",
+     "d_ApR",
+     "dy_D",
+     "dx_p",
+     "e_R"
+    ],
+    "n5_sequence": [
+     "tau",
+     "blocked",
+     "dt",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "x_D_rel",
+     "d_APR",
+     "d_ApR",
+     "a_chk",
+     "dy_A",
+     "dy_D",
+     "dx_p"
+    ]
+   },
+   "asym_3p": {
+    "n4_depth": 19,
+    "n5_depth": 22,
+    "delta": 3,
+    "n4_distinct": 19,
+    "n5_distinct": 22,
+    "repeats_n4": false,
+    "repeats_n5": false,
+    "common_prefix_len": 1,
+    "features_joined_at_n5": [
+     "t_A2",
+     "A2next",
+     "d_chk",
+     "dy_A",
+     "dx_p",
+     "e_R",
+     "d_KA_A2",
+     "d_KD_A2",
+     "dx_A2"
+    ],
+    "features_left_path_at_n5": [
+     "nB",
+     "t_D2",
+     "d_DpR",
+     "dy_D",
+     "d_KA_D2",
+     "d_KD_D2"
+    ],
+    "n4_sequence": [
+     "nW",
+     "nB",
+     "rwhite",
+     "tau",
+     "t_R",
+     "dt",
+     "t_D2",
+     "rnext",
+     "Dpnext",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "d_APR",
+     "dy_D",
+     "d_KA_D2",
+     "d_KD_D2"
+    ],
+    "n5_sequence": [
+     "nW",
+     "rwhite",
+     "tau",
+     "t_R",
+     "dt",
+     "t_A2",
+     "rnext",
+     "A2next",
+     "Dpnext",
+     "d_DPR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "d_APR",
+     "d_chk",
+     "dy_A",
+     "dx_p",
+     "e_R",
+     "d_KA_A2",
+     "d_KD_A2",
+     "dx_A2"
+    ]
+   },
+   "four_pawn": {
+    "n4_depth": 21,
+    "n5_depth": 24,
+    "delta": 3,
+    "n4_distinct": 21,
+    "n5_distinct": 24,
+    "repeats_n4": false,
+    "repeats_n5": false,
+    "common_prefix_len": 15,
+    "features_joined_at_n5": [
+     "x_D_rel",
+     "d_APR",
+     "dy_D",
+     "d_KD_A2",
+     "d_KA_D2"
+    ],
+    "features_left_path_at_n5": [
+     "dx_A2",
+     "dx_D2"
+    ],
+    "n4_sequence": [
+     "rwhite",
+     "tau",
+     "t_R",
+     "dt",
+     "t_A2",
+     "t_D2",
+     "rnext",
+     "A2next",
+     "Dpnext",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "dx_p",
+     "e_R",
+     "d_KA_A2",
+     "d_KD_D2",
+     "dx_A2",
+     "dx_D2"
+    ],
+    "n5_sequence": [
+     "rwhite",
+     "tau",
+     "t_R",
+     "dt",
+     "t_A2",
+     "t_D2",
+     "rnext",
+     "A2next",
+     "Dpnext",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "x_D_rel",
+     "d_APR",
+     "dy_D",
+     "dx_p",
+     "e_R",
+     "d_KA_A2",
+     "d_KD_A2",
+     "d_KA_D2",
+     "d_KD_D2"
+    ]
+   },
+   "full_vs_n4_deepest_family": {
+    "n4_reference": "four_pawn (deepest N=4 family; N=4 full space was the 3-MTBDD router, deepest branch depth 21)",
+    "n4_depth": 21,
+    "n5_depth": 26,
+    "delta": 5,
+    "features_joined_at_n5": [
+     "nW",
+     "nB",
+     "x_D_rel",
+     "d_APR",
+     "dy_D",
+     "d_KD_A2",
+     "d_KA_D2"
+    ],
+    "features_left_path_at_n5": [
+     "dx_A2",
+     "dx_D2"
+    ],
+    "n5_sequence": [
+     "nW",
+     "nB",
+     "rwhite",
+     "tau",
+     "t_R",
+     "dt",
+     "t_A2",
+     "t_D2",
+     "rnext",
+     "A2next",
+     "Dpnext",
+     "d_DPR",
+     "d_DpR",
+     "d_APD",
+     "opp",
+     "d_AK",
+     "x_A_rel",
+     "x_D_rel",
+     "d_APR",
+     "dy_D",
+     "dx_p",
+     "e_R",
+     "d_KA_A2",
+     "d_KD_A2",
+     "d_KA_D2",
+     "d_KD_D2"
+    ]
+   }
+  },
+  "chain_analysis": {
+   "4/duel": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "4/asym_3p": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "4/four_pawn": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "5/duel": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "5/asym_3p": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "5/four_pawn": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   },
+   "5/full": {
+    "any_feature_repeated": false,
+    "repeats": {},
+    "verdict": "no chains possible or observed: the MTBDD has a fixed variable order and feature indices strictly increase along every root-to-leaf path, so each feature is tested at most once per path (depth == n_distinct_features on every trace)"
+   }
+  },
+  "verdict": {
+   "chains_of_plus1_model": "REFUTED",
+   "mechanism": "distinct-feature growth",
+   "evidence": [
+    "all 7 traces: depth == n_distinct_features; no feature is tested twice on any deepest path (and none can be: variable order is fixed, indices strictly increase along every path)",
+    "the AI's 'range-refinement chain' pattern (same feature retested at coarsening thresholds) does not exist in this evaluator family: the MTBDD branches are multi-way equality tests on each feature's exact value, not binary <= thresholds",
+    "depth growth +1/+3/+3/+5 (duel/asym/4p/full-vs-N4-deepest) is fully accounted for by distinct-feature growth: duel +1 (a_chk, dy_A join; e_R leaves), asym +3 (9 join, 6 leave - the path substantially re-routes), 4p +3 (5 join, 2 leave), full +5 over the N=4 deepest family (nW, nB, x_D_rel, d_APR, dy_D, d_KD_A2, d_KA_D2 join; dx_A2, dx_D2 leave)",
+    "the closest empirical analog to a 'chain' is the consecutive run of 4 DISTINCT second-pawn interaction features closing the N=5 full-space path (d_KA_A2, d_KD_A2, d_KA_D2, d_KD_D2), each tested exactly once"
+   ],
+   "n6_prediction": {
+    "model": "distinct-feature growth (no chains)",
+    "prediction": {
+     "duel": "16-17",
+     "asym_3p": "24-25",
+     "four_pawn": "26-27",
+     "full_space": "29-31 (point estimate 30)"
+    },
+    "assumption": "depth(N=6) = depth(N=5) + (# features that become essential at N=6). The never-essential semantic pool is 15 d7 features (dy_p, e_p, dy_A2, dy_D2, blk_R_D2, blk_A2_Dp, blk_A2_D2, cap_A2, cap_D2, Rcap_D2, Dpcap_R, pass_R, pass_Dp, e_A2, e_D2) dominated by the second-pawn interaction block; assume 3-5 of them activate at N=6 (same mechanism that activated dy_p / d_ApR / nW / nB at N=5: more board room makes these structures discriminative). Each activation adds at most +1 test (structural, no repeats); path re-routes may also DROP features (asym joined 9 while dropping 6 at N=5), which bounds the growth from above. The tail (6 canonical coordinates) has never been essential at any N and is assumed to stay unused.",
+    "contrast": "the AI's chains model predicted ~31-32 for N=6; the numerically correct estimate under the observed mechanism is ~30 (29-31) - close by coincidence, wrong mechanism"
+   }
+  }
+ },
+ "e6_feature_symmetry": {
+  "method": "cheb/features5/features7 extracted from scripts_general/compress_family_general.py via AST and executed with N per board; 40k random canonical states per family per N; file-shift (+1) and rank-shift (+1) probes applied to square positions only (tau excluded; board-safe states only) plus a single-square move probe to detect non-spatial features",
+  "class_definitions": {
+   "absolute_coordinate": "changes under file translation (depends on absolute file; includes edge-folded e_* and the canonical tail)",
+   "rank_only": "invariant under file translation, changes under rank translation (promotion-anchored race distances; also role-reassigned pure relations whose runner flips when ranks shift)",
+   "relative_distance": "invariant under both file and rank translation",
+   "other_nonspatial": "piece-position independent (material, stm, role)"
+  },
+  "note": "tau/rwhite/nW/nB are non-spatial by construction and are classified 'other'; they are trivially translation-invariant, so ti_pct_spatial_only gives the invariance fraction over purely spatial features",
+  "basis_level": {
+   "duel_24": {
+    "other_nonspatial": 2,
+    "relative_distance": 3,
+    "rank_only": 15,
+    "absolute_coordinate": 4,
+    "translation_invariant": 18,
+    "translation_invariant_pct": 75.0,
+    "spatial_features": 22,
+    "ti_pct_spatial_only": 81.8
+   },
+   "d7_semantic_50": {
+    "other_nonspatial": 4,
+    "rank_only": 35,
+    "relative_distance": 5,
+    "absolute_coordinate": 6,
+    "translation_invariant": 40,
+    "translation_invariant_pct": 80.0,
+    "spatial_features": 46,
+    "ti_pct_spatial_only": 87.0
+   },
+   "d7_all_56_with_tail": {
+    "other_nonspatial": 4,
+    "rank_only": 35,
+    "relative_distance": 5,
+    "absolute_coordinate": 12,
+    "translation_invariant": 40,
+    "translation_invariant_pct": 71.4,
+    "spatial_features": 52,
+    "ti_pct_spatial_only": 76.9
+   },
+   "n_independent": "counts identical at N=4 and N=5 (symmetry structure does not depend on board size)"
+  },
+  "absolute_coordinate_features": {
+   "duel_24": [
+    "e_R",
+    "e_A",
+    "e_D",
+    "e_p"
+   ],
+   "d7_semantic_50": [
+    "e_R",
+    "e_A",
+    "e_D",
+    "e_p",
+    "e_A2",
+    "e_D2"
+   ],
+   "d7_tail_6": [
+    "cwk",
+    "cbk",
+    "cw1",
+    "cw2",
+    "cb1",
+    "cb2"
+   ],
+   "character": "all are edge-folded file metrics min(f, N-1-f) (proximity to the vertical board edge) or canonical tail coordinates; no raw absolute square appears in the semantic basis"
+  },
+  "survivor_level_ti": {
+   "n4_duel": {
+    "survivors": 21,
+    "translation_invariant": 17,
+    "pct": 81.0,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A",
+     "e_D"
+    ]
+   },
+   "n4_asym_3p": {
+    "survivors": 35,
+    "translation_invariant": 28,
+    "pct": 80.0,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A",
+     "e_D"
+    ]
+   },
+   "n4_four_pawn": {
+    "survivors": 32,
+    "translation_invariant": 27,
+    "pct": 84.4,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A",
+     "e_D"
+    ]
+   },
+   "n5_duel": {
+    "survivors": 20,
+    "translation_invariant": 18,
+    "pct": 90.0,
+    "absolute_among_survivors": [
+     "e_R"
+    ]
+   },
+   "n5_asym_3p": {
+    "survivors": 34,
+    "translation_invariant": 28,
+    "pct": 82.4,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A"
+    ]
+   },
+   "n5_four_pawn": {
+    "survivors": 32,
+    "translation_invariant": 28,
+    "pct": 87.5,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A"
+    ]
+   },
+   "n5_full": {
+    "survivors": 34,
+    "translation_invariant": 28,
+    "pct": 82.4,
+    "absolute_among_survivors": [
+     "e_R",
+     "e_A"
+    ]
+   }
+  },
+  "survivor_trend": "the fraction of translation-invariant features among MTBDD-USED features RISES from N=4 to N=5 (duel 81.0%->90.0%, asym 80.0%->82.4%, 4p 84.4%->87.5%, full 82.4%): the tuner progressively drops absolute-coordinate features (duel drops e_A, e_D at N=5)",
+  "verdict": {
+   "implicit_translation_hypothesis": "CONFIRMED (marginal-to-clear)",
+   "strict_fraction_relative_plus_rank_only": {
+    "duel_24": 75.0,
+    "d7_semantic_50": 80.0,
+    "d7_all_56": 71.4
+   },
+   "spatial_only_fraction": {
+    "duel_24": 81.8,
+    "d7_semantic_50": 87.0,
+    "d7_all_56": 76.9
+   },
+   "survivor_fraction_n5": {
+    "duel": 90.0,
+    "asym_3p": 82.4,
+    "four_pawn": 87.5,
+    "full": 82.4
+   },
+   "rationale": ">= 80% holds on both semantic bases under the spatial-only counting (81.8% duel, 87.0% d7) and exactly at the bar for d7-semantic under the strict relative+rank-only counting (80.0%); duel misses it strictly (75.0%) only because the two non-spatial role/tempo features (tau, rwhite) are excluded from the numerator there while being trivially translation-invariant. The only true violators are the edge-folded e_* metrics and the canonical tail - and the tail is never used by any built MTBDD. Compression does improve with N partly because the effective feature space is translation-invariant, and increasingly so: used-feature invariance grows with N."
+  },
+  "raw": {
+   "4": {
+    "duel_24": {
+     "other_nonspatial": 2,
+     "relative_distance": 3,
+     "rank_only": 15,
+     "absolute_coordinate": 4,
+     "translation_invariant": 18,
+     "translation_invariant_pct": 75.0,
+     "spatial_features": 22,
+     "ti_pct_spatial_only": 81.8
+    },
+    "d7_all_56": {
+     "other_nonspatial": 4,
+     "rank_only": 35,
+     "relative_distance": 5,
+     "absolute_coordinate": 12,
+     "translation_invariant": 40,
+     "translation_invariant_pct": 71.4,
+     "spatial_features": 52,
+     "ti_pct_spatial_only": 76.9
+    },
+    "d7_semantic_50": {
+     "other_nonspatial": 4,
+     "rank_only": 35,
+     "relative_distance": 5,
+     "absolute_coordinate": 6,
+     "translation_invariant": 40,
+     "translation_invariant_pct": 80.0,
+     "spatial_features": 46,
+     "ti_pct_spatial_only": 87.0
+    }
+   },
+   "5": {
+    "duel_24": {
+     "other_nonspatial": 2,
+     "relative_distance": 3,
+     "rank_only": 15,
+     "absolute_coordinate": 4,
+     "translation_invariant": 18,
+     "translation_invariant_pct": 75.0,
+     "spatial_features": 22,
+     "ti_pct_spatial_only": 81.8
+    },
+    "d7_all_56": {
+     "other_nonspatial": 4,
+     "rank_only": 35,
+     "relative_distance": 5,
+     "absolute_coordinate": 12,
+     "translation_invariant": 40,
+     "translation_invariant_pct": 71.4,
+     "spatial_features": 52,
+     "ti_pct_spatial_only": 76.9
+    },
+    "d7_semantic_50": {
+     "other_nonspatial": 4,
+     "rank_only": 35,
+     "relative_distance": 5,
+     "absolute_coordinate": 6,
+     "translation_invariant": 40,
+     "translation_invariant_pct": 80.0,
+     "spatial_features": 46,
+     "ti_pct_spatial_only": 87.0
+    }
+   }
+  }
+ },
+ "lost_entries_not_restorable": {
+  "e1_core_check": {
+   "status": "artifact lost in outage; NOT re-run per instruction",
+   "conclusion_carried": "CORE/CORE2..CORE9 sequence-array claim: FALSIFIED; architectural correction: phase 7b reached closure (residual 0), README's 93.84% is a phase-6c snapshot",
+   "durable_evidence": {
+    "phase7b_results.json": "\"residual\": 0, \"residual_core\": 0, \"residual_leftover\": 0, psi_v7b_global 154,888 @ acc 1.0; mandates repaired 578 + 3,268 = 3,846 states over the 151,042-state v7a atlas",
+    "README.md": "lines 5/18-19 present 93.84% (145,354 states) + 6.16% (9,534) as the two-tier split - a phase-6c snapshot, superseded by phase 7b's 0-residual closure",
+    "repo download/ inventory": "phase1-7b oracle/evaluator npz files only; no CORE.npy or CORE* sequence arrays exist"
+   }
+  },
+  "e2_contact_vs_race_share": {
+   "status": "artifact lost in outage; NOT re-run per instruction; hypothesis (non-contact race share grows with N and drives compression) remains UNVERIFIED in the archive",
+   "durable_hint": "draw share falls 6.92% -> 4.98% from N=4 to N=5 (scaling_summary.json), consistent in direction with the hypothesis but not a test of it"
+  },
+  "e4_mzz_signature": {
+   "status": "artifact lost in outage; N=5 half NOT re-run per instruction",
+   "n4_half_durable": "phase7b_results.json \"mutual_zugzwang_exact\": 16 = 8 placements x 2 tempos - matches the AI's N=4 expectation exactly (16 MZZ states on 154,888)",
+   "n5_half": "lost; the 168-placement (336-state) expectation remains unverified"
+  },
+  "e5_timing": {
+   "status": "artifact lost in outage; recoverable core evidence survives in durable summaries",
+   "durable_evidence": {
+    "solver_wall_s": {
+     "n3": 0.2,
+     "n4": 2.0,
+     "n5": 110.5
+    },
+    "solver_peak_rss_mib": {
+     "n3": 36.4,
+     "n4": 87.5,
+     "n5": 2370.9
+    },
+    "v1_trace_mode_wall_s": {
+     "n5_duel": 4.2,
+     "n5_asym_3p": 51.0,
+     "n5_four_pawn": 123.5,
+     "n5_full": 163.8
+    },
+    "n5_full_build_stages": "orbit quotient ~83 s, feature extraction ~20 s, MTBDD build ~59 s (run_5_full.log; trace re-run 163.8 s total, peak RSS 2,240 MiB)"
+   }
+  }
+ }
+}

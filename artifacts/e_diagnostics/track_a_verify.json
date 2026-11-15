@@ -1,0 +1,18 @@
+{
+ "meta": {
+  "experiment": "Track A re-run: full N=5 verification (post-outage re-run, 2026-11-15)",
+  "evaluator": "scripts_general/compress_n5/full_space_algebraic.py (v1, 78,305 MTBDD nodes, 385,228 lines)",
+  "oracle": "scripts_general/out_n5/phase1_values.npz VAL array only (solver NOT re-run)",
+  "base_for_comparison": "the v1 build-time verification sampled 2,000,000 of 6,744,724 states (seeded cap); this run evaluates ALL legal states",
+  "value_mapping": "oracle VAL {1 win, 2 loss, 3 draw} -> evaluator space {1, 2, 0}; stm from sid parity (STMW[sid] == (sid&1)==0 by construction)"
+ },
+ "legal_count": 6744724,
+ "evaluated_count": 6744724,
+ "value_mismatches": 0,
+ "absolute_mismatches": 0,
+ "loop_wall_s": 45.5,
+ "us_per_state": 6.748,
+ "total_wall_s": 48.6,
+ "gate": "legal_count == 6,744,724 AND evaluated_count == 6,744,724 AND value_mismatches == 0 AND absolute_mismatches == 0",
+ "verdict": "PASS"
+}

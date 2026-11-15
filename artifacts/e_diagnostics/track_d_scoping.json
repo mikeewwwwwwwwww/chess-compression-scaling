@@ -1,0 +1,79 @@
+{
+ "meta": {
+  "experiment": "Track D re-run: 4x4 K2P+N scoping enumeration (post-outage re-run, 2026-11-15)",
+  "method": "pure analytic enumeration over the 91,404 K2P placements; no oracle build; exact counts (no sampling)",
+  "board": "4x4, K2P conventions (kings non-adjacent, <=2 pawns/side on band y in 1..2, kings off pawns) + knights on any free square",
+  "legality_variants": {
+   "repo_legal (primary)": "side NOT to move is not attacked by enemy pawns or enemy knights (K2P rule extended to the added piece type); the count the retrograde oracle would accept",
+   "structural_raw": "constraints as listed in the resume instruction only (no check rule); both tempos counted"
+  },
+  "assumptions": [
+   "pawn cap stays 0-2 per side (K2P material plus knights)",
+   "knights unrestricted to band/back ranks (any free square)",
+   "kings non-adjacent by construction; K-K, K-P, P-P, knight-square exclusions shared from the K2P placement pool",
+   "no knight-vs-own-side constraints beyond square occupancy",
+   "the 9-class K2P family partition does NOT cover K2P+N: new material classes (knight counts) would need their own family routing in the compressor"
+  ],
+  "feasibility_scaling": "build wall ~ 110.5 s x (states/6,744,724); build RSS ~ 2.37 GiB x (states/6,744,724); 4 GiB sandbox guard ~3.4 GiB (the guard that killed the first N=5 full-space attempt)"
+ },
+ "scenario_a_0_1_knights": {
+  "knights_per_side": "0-1",
+  "placements_enumerated": 91404,
+  "legal_states_repo_rule": 17184932,
+  "states_stm0_white_to_move": 8592466,
+  "states_stm1_black_to_move": 8592466,
+  "states_structural_raw_no_check_rule": 23499400,
+  "selftest_no_knight_term_equals_k2p_legal": true,
+  "feasibility": {
+   "est_edges_density_scaled": {
+    "lo": 58965415,
+    "hi": 82936963,
+    "note": "density range from K2P N=4 (3.43) and N=5 (4.83) edges/state; added knight mobility pushes toward the upper end"
+   },
+   "raw_array_memory_gib": {
+    "edges_int32": 0.06,
+    "val_int8": 0.016
+   },
+   "scaled_build_wall_s": 282,
+   "scaled_build_wall_h": 0.08,
+   "scaled_build_rss_gib": 6.0,
+   "fits_4gib_sandbox": false,
+   "fits_32gib_workstation": true
+  }
+ },
+ "scenario_b_0_2_knights": {
+  "knights_per_side": "0-2",
+  "placements_enumerated": 91404,
+  "legal_states_repo_rule": 353987244,
+  "states_stm0_white_to_move": 176993622,
+  "states_stm1_black_to_move": 176993622,
+  "states_structural_raw_no_check_rule": 559817320,
+  "selftest_no_knight_term_equals_k2p_legal": true,
+  "feasibility": {
+   "est_edges_density_scaled": {
+    "lo": 1214610846,
+    "hi": 1708393557,
+    "note": "density range from K2P N=4 (3.43) and N=5 (4.83) edges/state; added knight mobility pushes toward the upper end"
+   },
+   "raw_array_memory_gib": {
+    "edges_int32": 1.32,
+    "val_int8": 0.33
+   },
+   "scaled_build_wall_s": 5799,
+   "scaled_build_wall_h": 1.61,
+   "scaled_build_rss_gib": 124.4,
+   "fits_4gib_sandbox": false,
+   "fits_32gib_workstation": false
+  }
+ },
+ "validation": "both scenarios independently brute-force enumerated (explicit per-placement knight-subset loops, 353 s) with EXACT agreement: scenario a 17,184,932 / scenario b 353,987,244",
+ "k2p_reference_points": {
+  "k2p_n4_legal": 154888,
+  "k2p_n4_edges": 531456,
+  "k2p_n5_legal": 6744724,
+  "k2p_n5_edges": 32551012,
+  "k2p_n5_wall_s": 110.5,
+  "k2p_n5_rss_gib": 2.3709
+ },
+ "runtime_s": 0.6
+}

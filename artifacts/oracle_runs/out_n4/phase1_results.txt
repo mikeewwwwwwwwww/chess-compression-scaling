@@ -1,0 +1,85 @@
+config: N=4  out_dir=./out_n4  skip_invariants=True
+NK=156 king pairs, NC=37 configs/side, NPP=885 valid pawn-config pairs
+State slots NS = NK*NPP*2 = 276120
+placements enumerated: 91404   (1.1s)
+legal states: 154888   directed edges: 531456
+terminal states: mates=776 stalemates=1028 immediate-promotion wins=69572
+retrograde fixpoint reached (1.3s); unresolved -> cycle-draws = 9696
+DTC iteration converged in 13 sweeps; max DTC = 13 plies (over decided states)
+self-tests: mirror symmetry OK; phi/mu/chi anti-symmetry OK; K-vs-K all draws OK
+probe C (Kb2,Pb3 vs kb4): White to move -> W DTC=3; Black to move -> D
+
+== VALUE DISTRIBUTION ==  White wins 72082 (46.54%) | draws 10724 (6.92%) | Black wins 72082 (46.54%)
+
+== VALUE BY MATERIAL CLASS (white pawn count x black pawn count) ==
+   WxB      n     White+     draw    Black+   draw%
+   2x2     63628     30656     2316     30656    3.6%
+   2x1     30944     20602     1856      8486    6.0%
+   2x0      6226      5796      430         0    6.9%
+   1x2     30944      8486     1856     20602    6.0%
+   1x1     12384      5120     2144      5120   17.3%
+   1x0      2112      1422      690         0   32.7%
+   0x2      6226         0      430      5796    6.9%
+   0x1      2112         0      690      1422   32.7%
+   0x0       312         0      312         0  100.0%
+
+== TEMPO STRUCTURE (placements with both tempi legal: 66582) ==
+  mutual zugzwang placements (mover LOSES with either tempo): 8
+  first-player-win placements (mover WINS with either tempo):  30500
+  tempo-sensitive placements (outcome-for-White flips with tempo): 34964
+  tempo-sensitive breakdown (outcome W-to-move, outcome B-to-move): [((1, 2), 30500), ((3, 2), 2186), ((1, 3), 2186), ((2, 3), 42), ((3, 1), 42), ((2, 1), 8)]
+
+== LAB: K+P vs K (n=2112)  White+ 1422  draw 690  Black+ 0
+  with White to move: White wins 84.80%  (n=1000)
+
+== PROBE POSITIONS ==
+  probe A  Kb1,Pa2,Pd2 vs kc4,pa3,pd3 (self-mirror, all pawns blocked)
+     a b c d
+   4 . . k .  White to move
+   3 p . . p  White to move
+   2 P . . P  White to move
+   1 . K . .  White to move
+     value: draw  phi=0 mu=0 chi=0 block=False
+     a b c d
+   4 . . k .  Black to move
+   3 p . . p  Black to move
+   2 P . . P  Black to move
+   1 . K . .  Black to move
+     value: draw  phi=0 mu=0 chi=0 block=False
+  probe B  Kb1,Pb2,Pc2 vs kc4,pb3,pc3 (self-mirror, mutual captures)
+     a b c d
+   4 . . k .  White to move
+   3 . p p .  White to move
+   2 . P P .  White to move
+   1 . K . .  White to move
+     value: draw  phi=0 mu=0 chi=0 block=False
+     a b c d
+   4 . . k .  Black to move
+   3 . p p .  Black to move
+   2 . P P .  Black to move
+   1 . K . .  Black to move
+     value: draw  phi=0 mu=0 chi=0 block=False
+  probe C  Kb2,Pb3 vs kb4 (1v0 blockade/stalemate probe)
+     a b c d
+   4 . k . .  White to move
+   3 . P . .  White to move
+   2 . K . .  White to move
+   1 . . . .  White to move
+     value: White wins  (DTC 3)  phi=0 mu=0 chi=0 block=False
+     a b c d
+   4 . k . .  Black to move
+   3 . P . .  Black to move
+   2 . K . .  Black to move
+   1 . . . .  Black to move
+     value: draw  phi=0 mu=0 chi=0 block=False
+
+== DTC (plies to conversion, optimal play) ==  White wins: max 13, mean 1.78;  deepest state:
+     a b c d
+   4 . k . .  Black to move
+   3 P p p .  Black to move
+   2 P . . .  Black to move
+   1 K . . .  Black to move
+     value: White wins  (DTC 13)  phi=0 mu=0 chi=0 block=False
+
+arrays saved -> ./out_n4/phase1_values.npz
+total runtime 1.8s  |  python 3.12.16 numpy 2.1.3
