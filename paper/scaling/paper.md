@@ -185,7 +185,7 @@ Basis v2 adds eight signed knight offsets (per-axis deltas from each knight to i
 |---|---|---|---|---|
 | K+N vs K+N | 3 | 4 | 0 | F, 1.7 s |
 | K+N vs K+N | 4 | 6 | 0 | S (14.2%), 2.5 s |
-| K+N vs K+N | 5 | 6 | 0 | S (4.7%), 18.7 s |
+| K+N vs K+N | 5 | 6 | 0 | S (4.8%), 18.7 s |
 | K+P+N vs K | 4 | 518 | 0 | S (14.5%), 1.9 s |
 | K+P+N vs K | 5 | 4,004 | 0 | S (9.0%), 22.8 s |
 | K+P vs K+P+N | 4 | 2,946 | 0 | S (14.8%), 18.8 s |
@@ -215,7 +215,7 @@ For the K+P vs K+P+N class, Z3 proved — independently of VAL, in 0.25 s — th
 
 ### 6.6 What Z3 proves and what it does not
 
-Z3 proves value-sufficiency of a feature basis on a (sub)space — a soundness certificate for compilation. It does not prove optimality of the basis, does not bound node counts, and does not transfer across material classes. On five classes the proofs are bounded-subspace proofs (an array axiomatisation over 3,640-22,375 states, 4.7-14.8% of the class) because the full-class axiomatisation exceeded the compute budget or the 60,000-state cap; on the 1.36M-state class only the empirical layer (perfect injectivity over all 1,358,808 states) is available. The proof tiers are reported per class rather than averaged into a headline.
+Z3 proves value-sufficiency of a feature basis on a (sub)space — a soundness certificate for compilation. It does not prove optimality of the basis, does not bound node counts, and does not transfer across material classes. On five classes the proofs are bounded-subspace proofs (an array axiomatisation over 3,640-22,375 states, 4.8-14.8% of the class) because the full-class axiomatisation exceeded the compute budget or the 60,000-state cap; on the 1.36M-state class only the empirical layer (perfect injectivity over all 1,358,808 states) is available. The proof tiers are reported per class rather than averaged into a headline.
 
 ## 7. Connection to Balance Laws in the Literature
 
