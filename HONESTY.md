@@ -58,7 +58,7 @@ run. Nothing in this repository should be read as a speed claim.
   or predict compression ratios, and does NOT transfer across material
   classes.
 - Proof tiers are per class and budget-bounded: 1 full-class unsat (kn
-  N=3), 5 bounded-subspace unsat (4.7-14.8% of each class, capped by a
+  N=3), 5 bounded-subspace unsat (4.8-14.8% of each class, capped by a
   60,000-state array axiomatisation budget), 1 empirical-only (both N=4,
   1.36M states). The tier system exists precisely so that a budget
   artifact cannot masquerade as a theorem.

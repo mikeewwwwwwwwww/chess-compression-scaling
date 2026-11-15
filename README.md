@@ -192,12 +192,14 @@ arrays and the original directory layout; see REPRODUCE.md.
 ## Citation
 
 ```bibtex
-@article{mikeewwwwwwwwww2026scaling,
-  author = {mikeewwwwwwwwww},
-  title  = {Two-Axis Scaling of Chess Value Function Compression:
-            Board Size Helps, Balance Hurts},
-  year   = {2026},
-  note   = {arXiv preprint / independent research}
+@misc{mikeewwwwwwwwww2026scaling,
+  author       = {mikeewwwwwwwwww},
+  title        = {Two-Axis Scaling of Chess Value Function Compression:
+                  Board Size Helps, Balance Hurts},
+  year         = {2026},
+  howpublished = {\url{https://github.com/mikeewwwwwwwwww/chess-compression-scaling}},
+  note         = {Independent research; two-paper repository with full
+                  measurement artifacts}
 }
 ```
 

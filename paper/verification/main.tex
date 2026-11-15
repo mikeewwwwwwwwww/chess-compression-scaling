@@ -27,9 +27,11 @@ equal values. We formalize this adequacy condition as an existential SMT
 query and certify it with Z3 for a family of solved chess-fragment classes
 (kings, pawns, and knights on $N\times N$ boards, up to 1.36M states per
 class). The v1 feature basis of the underlying pipeline is refuted on all
-seven classes, with concrete, machine-checked counterexamples exhibiting
-three distinct ambiguity mechanisms (knight-square geometry, rank
-translation, pawn geometry). The repaired v2 basis---signed per-axis
+seven classes---with concrete, machine-checked counterexamples on the six
+classes that publish pairs, the mirror-symmetric class being certified by
+the VAL-free symmetry proof of \S\ref{sec:mirror} instead---exhibiting
+three distinct ambiguity mechanisms: knight-square geometry, rank
+translation, and pawn geometry. The repaired v2 basis---signed per-axis
 piece-to-king offsets, king rank-edge distances, and signed pawn
 offsets---closes all seven classes: one full-class unsat proof, five
 bounded-subspace unsat proofs, and one perfect-injectivity empirical layer
@@ -57,7 +59,8 @@ whose value function is compiled into zero-lookup MTBDD evaluators---this
 assumption was initially trusted on empirical evidence alone (zero observed
 conflicts). That evidence was insufficient: when the pipeline was extended
 to knight-bearing material (K2P+N), a symbolic check found the assumption
-false, with concrete counterexamples, on every class tested.
+false on every class tested, with certified counterexamples that directly
+drove the repair.
 
 This paper is a case study in turning that assumption into a certificate.
 We formalize feature-basis adequacy as an existential SMT query over the
@@ -314,8 +317,12 @@ attack/check and capture relations), extended by 14 pawn features on pawn
 classes: 18 features on knight-only classes, 32 on pawn classes. The query
 (\ref{eq:query}) is \textsc{sat} on all seven classes: 4 to 17{,}892
 conflict buckets per class (Table~\ref{tab:v1}). Every published bucket
-pair was re-verified symbolically; the counterexamples are not empirical
-accidents but certified members of the class. The symbolic re-verification
+pair was re-verified symbolically, so the counterexamples are not empirical
+accidents but certified members of the class; the mirror class publishes
+no pair---its v1 record is empirical conflict buckets only (2{,}946), and
+its dedicated certification is the mirror-symmetry proof and the
+136{,}068-agreement cross-oracle check of \S\ref{sec:mirror}, hence the
+``--'' in the certified column. The symbolic re-verification
 matters because the buckets are found by Python hashing: a bucketing bug
 would produce phantom pairs, and re-encoding both states from scratch in
 Z3---legality, features, and values independent of the bucketing code---rules
@@ -542,7 +549,7 @@ class & status & subspace & emp (s) & total (s) \\
 \midrule
 kn, $N{=}3$ & \textsc{proved} & full class & 0.0 & 5.6 \\
 kn, $N{=}4$ & \textsc{subspace} & $wk{<}2$; 14.2\% & 0.03 & 271.8 \\
-kn, $N{=}5$ & \textsc{subspace} & $wk{<}1$; 4.7\% & 0.39 & 45.1 \\
+kn, $N{=}5$ & \textsc{subspace} & $wk{<}1$; 4.8\% & 0.39 & 45.1 \\
 kpn, $N{=}4$ & \textsc{subspace} & $wk{<}2$; 14.5\% & 0.02 & 189.8 \\
 kpn, $N{=}5$ & \textsc{subspace} & $wk{<}2$; 9.0\% & 0.25 & 32.8 \\
 mirror, $N{=}4$ & \textsc{subspace} & $wk{<}2$; 14.8\% & 0.13 & 27.6 \\
@@ -608,7 +615,7 @@ independent solver runs.
 
 \subsection{Subspace proofs vs.\ full proofs}
 Five of the seven verdicts are bounded-subspace proofs: the array
-axiomatisation covers 4.7--14.8\% of the class (white king restricted to
+axiomatisation covers 4.8--14.8\% of the class (white king restricted to
 the lowest ranks), selected to fit the 60{,}000-state cap. The subspace is
 chosen for budget reasons, not because the remaining region is known to be
 harder; the empirical layer (zero conflicts over all states) is the only
@@ -686,7 +693,7 @@ database work traditionally validates by exhaustive evaluation against the
 oracle, which verifies correctness but neither diagnoses failures nor
 guides repairs. The certificate complements the diagram tradition on its
 own terms: BDD packages succeed or fail on variable orderings and feature
-choices that are usually justified informally \cite{somenzi\_cudd}, and
+choices that are usually justified informally \cite{somenzi_cudd}, and
 here that justification is replaced by a machine-checked one.
 
 \section{Conclusion}

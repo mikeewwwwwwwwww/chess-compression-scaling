@@ -83,8 +83,9 @@ the feature basis is value-sufficient) before results are trusted.
 ## Scaling findings (summary)
 
 - **Board size (N=3 -> 5):** states x150 / x43.5; routed nodes 4,885 ->
-  84,618; ratios 1:31.7 -> 1:79.7 routed, 1:86.1 unified at N=5; depth
-  21 -> 26; nodes ~ states^0.775 (pooled log-log OLS). Mechanisms: E3
+  84,618; ratios 1:31.7 -> 1:79.7 routed, 1:86.1 unified at N=5;
+  per-family routed depth 15->16, 19->22, 21->24 (unified N=5 build: 26);
+  nodes ~ states^0.775 (pooled log-log OLS). Mechanisms: E3
   (path depth = distinct-feature count; features activate slowly), E6
   (used features 80-90% translation-invariant, rising with N).
 - **Material balance (K2P+N, N=4):** balanced material +1 knight/side:
